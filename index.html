@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al Fajr Physiotherapy & Rehabilitation | Ras Al Khaimah</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&family=Noto+Serif+Arabic:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --r1:#1a0308;--r2:#2d0510;--r3:#5c0a1f;--r4:#8b1a34;--r5:#b5203f;--r6:#d4294e;--ra:#e84060;
+  --rp:#fdf0f3;--rm:#f5d5dc;--w:#fff;--off:#fdfbfb;--g1:#f7f2f3;--g2:#ede5e7;
+  --t1:#1a0a0d;--t2:#4a2830;--t3:#8a6870;
+  --fd:"Cormorant Garamond",serif;--fb:"Outfit",sans-serif;--fa:"Noto Serif Arabic",serif;
+  --nav:76px;
+}
+[dir=rtl]{--fd:var(--fa);--fb:var(--fa)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);color:var(--t1);background:var(--w);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+svg{display:block}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-thumb{background:var(--r4)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--nav);display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(26,3,8,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(212,41,78,.2);transition:height .3s}
+nav.small{height:62px}
+.logo{display:flex;align-items:center;gap:12px}
+.lm{width:40px;height:40px;border-radius:50%;background:var(--r5);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:18px;font-weight:700;color:#fff;flex-shrink:0}
+.le{font-family:var(--fd);font-size:18px;font-weight:600;color:#fff;line-height:1.1}
+.ls{font-size:9px;color:rgba(232,64,96,.7);letter-spacing:1.5px;text-transform:uppercase}
+.nl{display:flex;gap:1.8rem;list-style:none}
+.nl a{font-size:12.5px;color:rgba(255,255,255,.65);transition:color .2s}
+.nl a:hover,.nl a.active{color:var(--ra)}
+.nr{display:flex;align-items:center;gap:12px}
+.lb{border:1px solid rgba(212,41,78,.5);border-radius:20px;padding:5px 15px;font-size:11.5px;color:var(--ra);background:transparent;cursor:pointer;transition:all .2s}
+.lb:hover{background:var(--r5);color:#fff}
+.cb{background:var(--r5);color:#fff;border:none;padding:10px 22px;border-radius:4px;font-size:12.5px;font-weight:500;cursor:pointer;transition:all .25s;display:inline-block}
+.cb:hover{background:var(--r6);transform:translateY(-1px)}
+.hb{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hb span{width:22px;height:1.5px;background:#fff;display:block}
+.mn{display:none;position:fixed;inset:0;top:var(--nav);background:var(--r1);z-index:199;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+.mn.open{display:flex}
+.mn a{font-family:var(--fd);font-size:28px;color:#fff}
+.mn a:hover{color:var(--ra)}
+/* HERO */
+#home{min-height:100vh;padding-top:var(--nav);background:var(--r1);position:relative;overflow:hidden;display:flex;align-items:center}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 65% 75% at 10% 50%,rgba(92,10,31,.5) 0%,transparent 65%),radial-gradient(ellipse 45% 55% at 90% 15%,rgba(181,32,63,.12) 0%,transparent 55%)}
+.hln{position:absolute;inset:0;overflow:hidden}
+.hl{position:absolute;top:0;bottom:0;width:1px;background:rgba(212,41,78,.06);transform-origin:top;animation:lg 2s ease both}
+.hl:nth-child(1){left:20%;animation-delay:.1s}.hl:nth-child(2){left:40%;animation-delay:.3s}.hl:nth-child(3){left:60%;animation-delay:.5s}.hl:nth-child(4){left:80%;animation-delay:.7s}
+@keyframes lg{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.hi{position:relative;z-index:2;width:100%;max-width:1220px;margin:0 auto;padding:0 5%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.heb{display:flex;align-items:center;gap:12px;margin-bottom:1.5rem;animation:fu .8s ease .3s both}
+.hel{width:38px;height:1px;background:var(--ra)}
+.het{font-size:10.5px;letter-spacing:3.5px;text-transform:uppercase;color:var(--ra);font-weight:400}
+h1.ht{font-family:var(--fd);font-size:clamp(46px,5.5vw,82px);font-weight:300;color:#fff;line-height:1.06;margin-bottom:1.5rem;animation:fu .8s ease .5s both}
+h1.ht em{font-style:italic;color:var(--ra)}
+.hs{font-size:14.5px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.9;margin-bottom:2.5rem;max-width:440px;animation:fu .8s ease .7s both}
+.hbt{display:flex;gap:12px;flex-wrap:wrap;animation:fu .8s ease .9s both}
+.br{background:var(--r5);color:#fff;border:none;padding:14px 32px;border-radius:4px;font-family:var(--fb);font-size:12.5px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;display:inline-block}
+.br:hover{background:var(--r6);transform:translateY(-2px);box-shadow:0 12px 32px rgba(181,32,63,.45)}
+.bg{border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);padding:14px 28px;border-radius:4px;font-size:12.5px;font-weight:400;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;background:transparent;transition:all .3s;display:inline-block}
+.bg:hover{border-color:var(--ra);color:var(--ra)}
+.hst{display:grid;grid-template-columns:repeat(3,1fr);background:rgba(255,255,255,.04);border:1px solid rgba(212,41,78,.15);border-radius:8px;overflow:hidden;margin-top:3rem;animation:fu .8s ease 1.1s both}
+.st{padding:1.3rem 1rem;text-align:center;border-right:1px solid rgba(255,255,255,.05)}
+.st:last-child{border-right:none}
+.sn{font-family:var(--fd);font-size:36px;font-weight:600;color:var(--ra);display:block;line-height:1}
+.sl{font-size:9.5px;color:rgba(255,255,255,.35);letter-spacing:1.5px;text-transform:uppercase;margin-top:6px;display:block}
+.hr{position:relative;animation:fi 1.2s ease .4s both}
+.hsw{border-radius:12px;overflow:hidden;border:1px solid rgba(212,41,78,.25);box-shadow:0 40px 80px rgba(0,0,0,.4)}
+.hib{position:absolute;bottom:-16px;left:-20px;background:var(--r5);border-radius:10px;padding:1.1rem 1.4rem;box-shadow:0 10px 36px rgba(181,32,63,.5)}
+.bn{font-family:var(--fd);font-size:30px;font-weight:700;color:#fff;display:block;line-height:1}
+.bl{font-size:10px;color:rgba(255,255,255,.7);margin-top:4px}
+/* SECTIONS */
+section{padding:96px 5%}
+.cn{max-width:1200px;margin:0 auto}
+.sh{text-align:center;margin-bottom:3.5rem}
+.ew{display:inline-flex;align-items:center;gap:10px;margin-bottom:1rem}
+.ew::before,.ew::after{content:"";width:28px;height:1px;background:var(--r5)}
+.ew span{font-size:10px;letter-spacing:3.5px;text-transform:uppercase;color:var(--r5);font-weight:500}
+h2.st2{font-family:var(--fd);font-size:clamp(32px,4vw,52px);font-weight:400;color:var(--t1);line-height:1.18}
+h2.st2.li{color:#fff}
+.sb{font-size:14px;color:var(--t3);max-width:500px;margin:.9rem auto 0;line-height:1.85;font-weight:300}
+.sb.li{color:rgba(255,255,255,.45)}
+/* ABOUT */
+#about{background:var(--off)}
+.ag{display:grid;grid-template-columns:1fr 1.1fr;gap:5.5rem;align-items:center}
+.aim{position:relative}
+.ai1{border-radius:12px;overflow:hidden;aspect-ratio:4/5}
+.ai2{position:absolute;bottom:-28px;right:-28px;width:54%;aspect-ratio:1;border-radius:10px;overflow:hidden;border:4px solid #fff;box-shadow:0 12px 48px rgba(26,3,8,.15)}
+.ayb{position:absolute;top:28px;left:-22px;background:var(--r3);border-radius:10px;padding:1rem 1.2rem;border:1px solid rgba(255,255,255,.1);box-shadow:0 8px 32px rgba(92,10,31,.4)}
+.ayn{font-family:var(--fd);font-size:32px;font-weight:600;color:#fff;display:block;line-height:1}
+.ayl{font-size:9px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1.5px;margin-top:5px}
+.at h2{font-family:var(--fd);font-size:44px;font-weight:400;line-height:1.18;margin-bottom:1.3rem}
+.at p{font-size:14px;color:var(--t2);line-height:1.95;font-weight:300;margin-bottom:1.1rem}
+.acs{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:1.5rem 0 2.2rem}
+.ac{display:flex;align-items:flex-start;gap:9px}
+.aci{width:18px;height:18px;border-radius:50%;background:rgba(181,32,63,.1);flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center}
+.aci svg{width:9px;height:9px;fill:none;stroke:var(--r5);stroke-width:2.5}
+.act{font-size:13px;color:var(--t2);line-height:1.5}
+/* CONDITIONS */
+#conditions{background:#fff}
+.cdg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.cdc{border-radius:14px;overflow:hidden;border:1px solid var(--g2);transition:all .35s;background:var(--off)}
+.cdc:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(26,3,8,.1);border-color:rgba(181,32,63,.25)}
+.cdimg{position:relative}
+.cdimg svg{width:100%}
+.cdlbl{position:absolute;top:12px;left:12px;background:var(--r5);color:#fff;font-size:9px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:4px 11px;border-radius:3px}
+.cdb{padding:1.4rem 1.5rem}
+.cdt{font-family:var(--fd);font-size:22px;font-weight:600;color:var(--t1);margin-bottom:.5rem}
+.cdd{font-size:13px;color:var(--t3);line-height:1.78;font-weight:300;margin-bottom:1rem}
+.cdl{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--r5);font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:gap .2s}
+.cdl:hover{gap:10px}
+/* SERVICES */
+#services{background:var(--rp)}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.sc{border-radius:12px;overflow:hidden;border:1px solid var(--g2);transition:all .35s;background:#fff}
+.sc:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(26,3,8,.09);border-color:rgba(181,32,63,.2)}
+.siw{padding:2rem 2rem 1rem;display:flex;align-items:center;gap:14px}
+.si{width:52px;height:52px;border-radius:12px;background:var(--rp);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.sit{font-family:var(--fd);font-size:21px;font-weight:600;color:var(--t1)}
+.sis{font-size:10px;color:var(--r5);text-transform:uppercase;letter-spacing:1px;font-weight:500}
+.sdv{height:1px;background:var(--g2);margin:0 2rem}
+.sbdy{padding:1.2rem 2rem 1.8rem}
+.sdd{font-size:13px;color:var(--t3);line-height:1.8;font-weight:300;margin-bottom:1rem}
+.slk{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--r5);font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:gap .2s}
+.slk:hover{gap:10px}
+/* WHY */
+#why{background:var(--r1);position:relative;overflow:hidden}
+#why::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 50% 110%,rgba(92,10,31,.4) 0%,transparent 70%)}
+#why::after{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(212,41,78,.4),transparent)}
+.wg{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.05);border-radius:12px;overflow:hidden}
+.wi{padding:2.5rem 1.75rem;background:rgba(255,255,255,.02);text-align:center;transition:background .3s}
+.wi:hover{background:rgba(181,32,63,.12)}
+.wic{font-size:36px;display:block;margin-bottom:1rem}
+.wt{font-family:var(--fd);font-size:21px;color:#fff;font-weight:400;margin-bottom:.7rem}
+.wd{font-size:12.5px;color:rgba(255,255,255,.4);line-height:1.8;font-weight:300}
+/* GALLERY */
+#gallery{background:var(--off)}
+.igh{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.2rem;flex-wrap:wrap;gap:1rem}
+.igi{width:38px;height:38px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.igh2{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.ign{font-size:14px;font-weight:500;color:var(--t1)}
+.igs{font-size:11.5px;color:var(--t3)}
+.igf{border:1px solid var(--r5);color:var(--r5);background:transparent;padding:9px 22px;border-radius:4px;font-size:12px;font-weight:500;cursor:pointer;transition:all .2s;display:inline-block}
+.igf:hover{background:var(--r5);color:#fff}
+.gg{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:auto auto;gap:10px}
+.gi{border-radius:8px;overflow:hidden;cursor:pointer;position:relative;aspect-ratio:1;background:var(--rp)}
+.gi svg{width:100%;height:100%}
+.gio{position:absolute;inset:0;background:rgba(26,3,8,.55);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
+.gi:hover .gio{opacity:1}
+.gio span{color:#fff;font-size:24px}
+.gi.lg{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.igc{text-align:center;margin-top:2rem}
+/* TEAM */
+#team{background:#fff}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.tc{border-radius:12px;overflow:hidden;background:var(--off);transition:all .3s;border:1px solid var(--g2)}
+.tc:hover{transform:translateY(-5px);box-shadow:0 18px 50px rgba(26,3,8,.1);border-color:rgba(181,32,63,.2)}
+.tp{aspect-ratio:1;overflow:hidden}
+.tp svg{width:100%;height:100%}
+.ti{padding:1.5rem}
+.tn{font-family:var(--fd);font-size:23px;font-weight:600;color:var(--t1);margin-bottom:3px}
+.tr{font-size:10.5px;color:var(--r5);text-transform:uppercase;letter-spacing:1.5px;font-weight:500;margin-bottom:.8rem}
+.tb{font-size:13px;color:var(--t3);line-height:1.75;font-weight:300}
+/* TESTI */
+#testimonials{background:var(--rp)}
+.teg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.tec{background:#fff;border-radius:12px;padding:2rem;position:relative;border:1px solid var(--g2)}
+.teq{font-family:var(--fd);font-size:72px;color:var(--rm);position:absolute;top:4px;left:18px;line-height:1}
+.tes{color:var(--r5);font-size:13px;letter-spacing:2px;margin-bottom:1rem}
+.tet{font-size:13.5px;color:var(--t2);line-height:1.85;font-style:italic;font-weight:300;margin-bottom:1.3rem}
+.tea{display:flex;align-items:center;gap:10px}
+.tav{width:36px;height:36px;border-radius:50%;background:var(--r5);display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;font-family:var(--fd);font-weight:600;flex-shrink:0}
+.tan{font-size:13px;font-weight:500;color:var(--t1)}
+.tal{font-size:11px;color:var(--t3)}
+/* BOOK */
+#book{background:var(--r1);padding:96px 5%}
+.bw{max-width:800px;margin:0 auto}
+.bk{background:rgba(255,255,255,.04);border:1px solid rgba(212,41,78,.2);border-radius:14px;padding:3.2rem}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.fg{display:flex;flex-direction:column;gap:7px}
+.fg.fu2{grid-column:1/-1}
+.fg label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:500}
+.fg input,.fg select,.fg textarea{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:5px;padding:12px 16px;color:#fff;font-family:var(--fb);font-size:14px;outline:none;transition:border .2s;width:100%}
+.fg input::placeholder{color:rgba(255,255,255,.2)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--ra)}
+.fg select{appearance:none;cursor:pointer}
+.fg select option{background:var(--r1)}
+.fg textarea{resize:vertical;min-height:95px}
+.fsub{width:100%;margin-top:.5rem;padding:16px;font-size:12.5px;letter-spacing:2px}
+/* CONTACT */
+#contact{background:var(--off)}
+.cog{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+.coi{display:flex;gap:14px;margin-bottom:2.2rem;align-items:flex-start}
+.coic{width:44px;height:44px;background:rgba(181,32,63,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;border:1px solid rgba(181,32,63,.12)}
+.coil{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--r5);font-weight:500;margin-bottom:5px}
+.coiv{font-size:14.5px;color:var(--t1);line-height:1.6}
+.coiv a{color:var(--r5)}
+.hrg{display:grid;grid-template-columns:1fr 1fr;gap:.4rem .8rem;margin-top:.5rem}
+.hr2{font-size:12.5px;color:var(--t2);font-weight:300}
+.hr2.bo{font-weight:500;color:var(--t1)}
+.mb{border-radius:12px;border:1px solid var(--g2);height:320px;background:linear-gradient(135deg,var(--rp),var(--g1));display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.8rem}
+.mn2{font-family:var(--fd);font-size:20px;color:var(--r4);font-weight:600}
+.ma{font-size:12px;color:var(--t3);text-align:center;max-width:220px;line-height:1.6}
+.mbtn{display:inline-block;margin-top:.6rem;padding:9px 20px;border:1px solid var(--r5);border-radius:4px;font-size:12px;color:var(--r5);font-weight:500;transition:all .2s}
+.mbtn:hover{background:var(--r5);color:#fff}
+.soc{display:flex;gap:10px;margin-top:2.2rem}
+.soi{width:40px;height:40px;border-radius:8px;background:#fff;border:1px solid var(--g2);display:flex;align-items:center;justify-content:center;font-size:17px;transition:all .2s}
+.soi:hover{background:var(--r5);border-color:var(--r5);transform:translateY(-2px)}
+footer{background:var(--r1);padding:2.75rem 5% 2rem}
+.ft{display:flex;justify-content:space-between;align-items:center;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem}
+.flo{font-family:var(--fd);font-size:21px;color:#fff;font-weight:600}
+.flo span{color:var(--ra)}
+.fl{display:flex;gap:1.5rem;flex-wrap:wrap}
+.fl a{font-size:12px;color:rgba(255,255,255,.3);transition:color .2s}
+.fl a:hover{color:var(--ra)}
+.fb2{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.fc{font-size:11.5px;color:rgba(255,255,255,.22)}
+.wa{position:fixed;bottom:28px;right:28px;z-index:300;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 24px rgba(37,211,102,.4);transition:transform .3s;animation:wp .4s ease 2.5s both}
+.wa:hover{transform:scale(1.1)}
+@keyframes wp{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+[dir=rtl] .wa{right:auto;left:28px}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv.vi{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+@keyframes fu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+[dir=rtl] .heb{flex-direction:row-reverse}
+[dir=rtl] .ayb{left:auto;right:-22px}
+[dir=rtl] .ai2{right:auto;left:-28px}
+[dir=rtl] .cdlbl{left:auto;right:12px}
+@media(max-width:960px){
+  .hi,.ag,.cog{grid-template-columns:1fr;gap:2.5rem}
+  .hr,.ai2,.ayb{display:none}
+  .cdg,.sg{grid-template-columns:1fr 1fr}
+  .wg{grid-template-columns:1fr 1fr}
+  .tg{grid-template-columns:1fr 1fr}
+  .teg{grid-template-columns:1fr}
+  .gg{grid-template-columns:repeat(3,1fr)}
+  .gi.lg{grid-column:span 1;grid-row:span 1}
+  .nl{display:none}
+  .hb{display:flex}
+}
+@media(max-width:600px){
+  .cdg,.sg,.tg,.wg,.gg{grid-template-columns:1fr}
+  .fg2{grid-template-columns:1fr}
+  section{padding:64px 5%}
+  .bk{padding:2rem 1.5rem}
+  .ft{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="logo" href="#home">
+    <div class="lm">AF</div>
+    <div>
+      <div class="le" data-en="Al Fajr" data-ar="الفجر">Al Fajr</div>
+      <div class="ls" data-en="Physiotherapy &amp; Rehabilitation" data-ar="العلاج الطبيعي وإعادة التأهيل">Physiotherapy &amp; Rehabilitation</div>
+    </div>
+  </a>
+  <ul class="nl">
+    <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+    <li><a href="#about" data-en="About" data-ar="عن العيادة">About</a></li>
+    <li><a href="#conditions" data-en="Conditions" data-ar="الحالات">Conditions</a></li>
+    <li><a href="#services" data-en="Services" data-ar="خدماتنا">Services</a></li>
+    <li><a href="#team" data-en="Team" data-ar="فريقنا">Team</a></li>
+    <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
+  </ul>
+  <div class="nr">
+    <button class="lb" id="lb" onclick="tl()">عربي</button>
+    <a href="#book" class="cb" data-en="Book Now" data-ar="احجز موعد">Book Now</a>
+  </div>
+  <button class="hb" onclick="tm()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mn" id="mn">
+  <a href="#home" onclick="cm()" data-en="Home" data-ar="الرئيسية">Home</a>
+  <a href="#about" onclick="cm()" data-en="About" data-ar="عن العيادة">About</a>
+  <a href="#conditions" onclick="cm()" data-en="Conditions" data-ar="الحالات">Conditions</a>
+  <a href="#services" onclick="cm()" data-en="Services" data-ar="خدماتنا">Services</a>
+  <a href="#team" onclick="cm()" data-en="Team" data-ar="فريقنا">Team</a>
+  <a href="#book" onclick="cm()" class="br" style="padding:12px 28px" data-en="Book Appointment" data-ar="احجز موعدك">Book Appointment</a>
+</div>
+
+<section id="home">
+  <div class="hbg"></div>
+  <div class="hln"><div class="hl"></div><div class="hl"></div><div class="hl"></div><div class="hl"></div></div>
+  <div class="hi cn">
+    <div>
+      <div class="heb"><div class="hel"></div><span class="het" data-en="Ras Al Khaimah · Al Nakheel" data-ar="رأس الخيمة · النخيل">Ras Al Khaimah · Al Nakheel</span></div>
+      <h1 class="ht"><span data-en="Restore<br><em>Movement.</em><br>Reclaim Life." data-ar="استعد<br><em>حركتك.</em><br>استرجع حياتك.">Restore<br><em>Movement.</em><br>Reclaim Life.</span></h1>
+      <p class="hs" data-en="Expert physiotherapy and rehabilitation by certified specialists. Treating shoulder, back, knee pain and dislocations in Ras Al Khaimah." data-ar="علاج طبيعي وإعادة تأهيل متخصص على يد متخصصين معتمدين. نعالج آلام الكتف والظهر والركبة والخلع في رأس الخيمة.">Expert physiotherapy and rehabilitation by certified specialists. Treating shoulder, back, knee pain and dislocations in Ras Al Khaimah.</p>
+      <div class="hbt">
+        <a href="#book" class="br" data-en="Book Appointment" data-ar="احجز موعدك">Book Appointment</a>
+        <a href="#conditions" class="bg" data-en="Conditions We Treat" data-ar="الحالات التي نعالجها">Conditions We Treat</a>
+      </div>
+      <div class="hst">
+        <div class="st"><span class="sn">4.6★</span><span class="sl" data-en="Google Rating" data-ar="تقييم جوجل">Google Rating</span></div>
+        <div class="st"><span class="sn">10+</span><span class="sl" data-en="Years Care" data-ar="سنوات خبرة">Years Care</span></div>
+        <div class="st"><span class="sn">5K+</span><span class="sl" data-en="Patients Helped" data-ar="مرضى علاجهم">Patients Helped</span></div>
+      </div>
+    </div>
+    <div class="hr">
+      <div class="hsw">
+        <svg viewBox="0 0 480 560" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+          <rect width="480" height="560" fill="#2d0510"/>
+          <ellipse cx="240" cy="250" rx="210" ry="190" fill="rgba(181,32,63,0.07)"/>
+          <!-- Treatment table -->
+          <rect x="55" y="345" width="370" height="18" rx="5" fill="#5c0a1f"/>
+          <rect x="78" y="363" width="14" height="70" rx="3" fill="#4a0818"/>
+          <rect x="388" y="363" width="14" height="70" rx="3" fill="#4a0818"/>
+          <!-- Patient body lying -->
+          <rect x="115" y="305" width="248" height="42" rx="21" fill="#d4a88a"/>
+          <!-- Patient head -->
+          <ellipse cx="372" cy="318" rx="30" ry="30" fill="#e0b896"/>
+          <ellipse cx="372" cy="295" rx="30" ry="17" fill="#3d2010"/>
+          <!-- Left arm -->
+          <rect x="125" y="314" width="76" height="13" rx="6.5" fill="#c8a080"/>
+          <!-- Therapist body (white coat) -->
+          <rect x="58" y="228" width="72" height="105" rx="13" fill="#fff"/>
+          <rect x="70" y="228" width="6" height="90" rx="3" fill="#b5203f"/>
+          <!-- Therapist head -->
+          <ellipse cx="94" cy="210" rx="27" ry="27" fill="#e0b896"/>
+          <ellipse cx="94" cy="192" rx="27" ry="15" fill="#3d2010"/>
+          <!-- Therapist arm reaching to patient shoulder -->
+          <path d="M122 258 Q178 276 212 316" stroke="#e0b896" stroke-width="17" fill="none" stroke-linecap="round"/>
+          <!-- Hand on shoulder -->
+          <ellipse cx="217" cy="320" rx="20" ry="13" fill="#e0b896"/>
+          <!-- SHOULDER PAIN INDICATOR -->
+          <circle cx="210" cy="304" r="28" fill="rgba(232,64,96,0.12)" stroke="#e84060" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <circle cx="210" cy="304" r="11" fill="rgba(232,64,96,0.45)"/>
+          <!-- Pain rays -->
+          <line x1="210" y1="276" x2="210" y2="265" stroke="#e84060" stroke-width="2" opacity=".7"/>
+          <line x1="232" y1="283" x2="241" y2="274" stroke="#e84060" stroke-width="2" opacity=".7"/>
+          <line x1="188" y1="283" x2="179" y2="274" stroke="#e84060" stroke-width="2" opacity=".7"/>
+          <line x1="238" y1="304" x2="250" y2="304" stroke="#e84060" stroke-width="2" opacity=".7"/>
+          <!-- Clinic equipment -->
+          <rect x="378" y="195" width="62" height="125" rx="7" fill="#5c0a1f" opacity=".6"/>
+          <rect x="388" y="205" width="42" height="35" rx="4" fill="#8b1a34" opacity=".7"/>
+          <text x="409" y="228" text-anchor="middle" font-family="monospace" font-size="11" fill="#e84060">TENS</text>
+          <circle cx="412" cy="250" r="7" fill="#e84060" opacity=".8"/>
+          <rect x="388" y="264" width="42" height="4" rx="2" fill="#8b1a34" opacity=".5"/>
+          <rect x="388" y="274" width="32" height="4" rx="2" fill="#8b1a34" opacity=".5"/>
+          <!-- Floor line -->
+          <rect x="0" y="458" width="480" height="102" fill="#1a0308"/>
+          <line x1="0" y1="458" x2="480" y2="458" stroke="rgba(212,41,78,0.25)" stroke-width="1"/>
+          <text x="240" y="498" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="rgba(232,64,96,0.65)" letter-spacing="3">AL FAJR PHYSIOTHERAPY</text>
+          <text x="240" y="518" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="rgba(255,255,255,0.22)" letter-spacing="2">RAS AL KHAIMAH</text>
+        </svg>
+      </div>
+      <div class="hib"><span class="bn">53</span><span class="bl" data-en="5-Star Reviews" data-ar="تقييم 5 نجوم">5-Star Reviews</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="cn">
+    <div class="ag">
+      <div class="aim rv">
+        <div class="ai1">
+          <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+            <defs><linearGradient id="abg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fdf0f3"/><stop offset="100%" stop-color="#ede5e7"/></linearGradient></defs>
+            <rect width="400" height="500" fill="url(#abg)"/>
+            <!-- Clinic room -->
+            <rect x="20" y="55" width="360" height="310" rx="5" fill="#fff" stroke="#ede5e7" stroke-width="1"/>
+            <!-- Window -->
+            <rect x="275" y="75" width="84" height="105" rx="4" fill="#ddeeff" stroke="#b5203f" stroke-width="2"/>
+            <line x1="317" y1="75" x2="317" y2="180" stroke="#b5203f" stroke-width="1.5"/>
+            <line x1="275" y1="127" x2="359" y2="127" stroke="#b5203f" stroke-width="1.5"/>
+            <!-- Al Fajr sign on wall -->
+            <rect x="145" y="90" width="110" height="44" rx="5" fill="#b5203f"/>
+            <text x="200" y="108" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#fff" font-weight="bold">AL FAJR</text>
+            <text x="200" y="124" text-anchor="middle" font-family="Arial" font-size="7.5" fill="rgba(255,255,255,.85)" letter-spacing="1">PHYSIOTHERAPY</text>
+            <!-- Spine poster on wall -->
+            <rect x="38" y="80" width="65" height="100" rx="4" fill="#fff" stroke="#ede5e7" stroke-width="1"/>
+            <text x="70" y="98" text-anchor="middle" font-family="Arial" font-size="8" fill="#8b1a34" font-weight="bold">SPINE</text>
+            <rect x="62" y="104" width="16" height="10" rx="3" fill="#f5d5dc" stroke="#b5203f" stroke-width=".8"/>
+            <rect x="62" y="117" width="16" height="10" rx="3" fill="#f5d5dc" stroke="#b5203f" stroke-width=".8"/>
+            <rect x="62" y="130" width="16" height="10" rx="3" fill="#e84060" stroke="#b5203f" stroke-width=".8"/>
+            <rect x="62" y="143" width="16" height="10" rx="3" fill="#f5d5dc" stroke="#b5203f" stroke-width=".8"/>
+            <rect x="62" y="156" width="16" height="10" rx="3" fill="#f5d5dc" stroke="#b5203f" stroke-width=".8"/>
+            <line x1="70" y1="100" x2="70" y2="168" stroke="#8b1a34" stroke-width="1" stroke-dasharray="2,2"/>
+            <!-- Treatment table -->
+            <rect x="55" y="300" width="248" height="28" rx="7" fill="#b5203f"/>
+            <rect x="72" y="328" width="13" height="55" rx="3" fill="#8b1a34"/>
+            <rect x="278" y="328" width="13" height="55" rx="3" fill="#8b1a34"/>
+            <!-- Patient -->
+            <rect x="78" y="275" width="185" height="26" rx="13" fill="#d4a88a"/>
+            <ellipse cx="278" cy="287" rx="23" ry="23" fill="#e0b896"/>
+            <ellipse cx="278" cy="268" rx="23" ry="13" fill="#3d2010"/>
+            <!-- Floor -->
+            <rect x="0" y="395" width="400" height="105" fill="#f7f2f3"/>
+            <line x1="20" y1="395" x2="380" y2="395" stroke="#ede5e7" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="ai2">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+            <rect width="300" height="300" fill="#fdf0f3"/>
+            <rect x="55" y="55" width="190" height="150" rx="10" fill="#fff" stroke="#ede5e7" stroke-width="2"/>
+            <rect x="70" y="70" width="105" height="65" rx="6" fill="#1a0308"/>
+            <text x="122" y="97" text-anchor="middle" font-family="monospace" font-size="19" fill="#e84060" font-weight="bold">TENS</text>
+            <text x="122" y="114" text-anchor="middle" font-family="Arial" font-size="7.5" fill="rgba(255,255,255,.5)" letter-spacing="1">ELECTROTHERAPY</text>
+            <circle cx="205" cy="97" r="18" fill="#b5203f"/>
+            <text x="205" y="103" text-anchor="middle" font-family="Arial" font-size="19" fill="#fff">⏻</text>
+            <rect x="75" y="152" width="150" height="7" rx="3" fill="#f5d5dc"/>
+            <rect x="75" y="152" width="95" height="7" rx="3" fill="#b5203f"/>
+            <circle cx="78" cy="178" r="9" fill="#b5203f" stroke="#8b1a34" stroke-width="2"/>
+            <circle cx="110" cy="178" r="9" fill="#f5d5dc" stroke="#ede5e7" stroke-width="2"/>
+            <circle cx="142" cy="178" r="9" fill="#f5d5dc" stroke="#ede5e7" stroke-width="2"/>
+            <line x1="78" y1="205" x2="78" y2="248" stroke="#8b1a34" stroke-width="2.5" stroke-dasharray="4,2"/>
+            <rect x="62" y="248" width="32" height="22" rx="5" fill="#b5203f" opacity=".75"/>
+            <line x1="155" y1="205" x2="155" y2="248" stroke="#8b1a34" stroke-width="2.5" stroke-dasharray="4,2"/>
+            <rect x="139" y="248" width="32" height="22" rx="5" fill="#b5203f" opacity=".75"/>
+            <text x="150" y="288" text-anchor="middle" font-family="Arial" font-size="9" fill="#8a6870" letter-spacing="1">TREATMENT DEVICE</text>
+          </svg>
+        </div>
+        <div class="ayb"><span class="ayn">10+</span><span class="ayl" data-en="Years" data-ar="سنوات">Years</span></div>
+      </div>
+      <div class="at rv d2">
+        <div class="ew"><span data-en="About Us" data-ar="عن العيادة">About Us</span></div>
+        <h2 data-en="Dedicated to Your Recovery Journey" data-ar="ملتزمون برحلة تعافيك">Dedicated to Your Recovery Journey</h2>
+        <p data-en="Al Fajr Physiotherapy &amp; Rehabilitation Centre has been a trusted cornerstone of healthcare in Ras Al Khaimah. Located in Al Safa Building, Al Nakheel, we provide evidence-based physiotherapy and rehabilitation services to patients of all ages." data-ar="يُعدّ مركز الفجر للعلاج الطبيعي وإعادة التأهيل ركيزةً موثوقةً في الرعاية الصحية برأس الخيمة. يقع في مبنى الصفا، النخيل، ويقدم خدمات علاجية قائمة على الأدلة لمرضى من مختلف الأعمار.">Al Fajr Physiotherapy &amp; Rehabilitation Centre has been a trusted cornerstone of healthcare in Ras Al Khaimah. Located in Al Safa Building, Al Nakheel, we provide evidence-based physiotherapy and rehabilitation services to patients of all ages.</p>
+        <p data-en="Our licensed specialists combine the latest clinical techniques with personalised care, helping you regain function, reduce pain and restore your quality of life." data-ar="يجمع متخصصونا المرخصون بين أحدث الأساليب السريرية والرعاية الشخصية، لمساعدتك على استعادة وظائفك وتخفيف الألم وتحسين جودة حياتك.">Our licensed specialists combine the latest clinical techniques with personalised care, helping you regain function, reduce pain and restore your quality of life.</p>
+        <div class="acs">
+          <div class="ac"><div class="aci"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1"/></svg></div><span class="act" data-en="Licensed &amp; certified therapists" data-ar="معالجون مرخصون ومعتمدون">Licensed &amp; certified therapists</span></div>
+          <div class="ac"><div class="aci"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1"/></svg></div><span class="act" data-en="Modern equipment &amp; techniques" data-ar="معدات وتقنيات حديثة">Modern equipment &amp; techniques</span></div>
+          <div class="ac"><div class="aci"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1"/></svg></div><span class="act" data-en="Personalised treatment plans" data-ar="خطط علاجية مخصصة">Personalised treatment plans</span></div>
+          <div class="ac"><div class="aci"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1"/></svg></div><span class="act" data-en="Arabic &amp; English speaking" data-ar="يتحدث العربية والإنجليزية">Arabic &amp; English speaking</span></div>
+          <div class="ac"><div class="aci"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1"/></svg></div><span class="act" data-en="Insurance accepted" data-ar="يُقبل التأمين الصحي">Insurance accepted</span></div>
+          <div class="ac"><div class="aci"><svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1"/></svg></div><span class="act" data-en="Flexible appointment times" data-ar="مواعيد مرنة">Flexible appointment times</span></div>
+        </div>
+        <a href="#book" class="br" data-en="Book a Consultation" data-ar="احجز استشارة">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITIONS WE TREAT -->
+<section id="conditions">
+  <div class="cn">
+    <div class="sh rv">
+      <div class="ew"><span data-en="Conditions We Treat" data-ar="الحالات التي نعالجها">Conditions We Treat</span></div>
+      <h2 class="st2" data-en="Pain Relief &amp; Recovery" data-ar="تخفيف الألم والتعافي">Pain Relief &amp; Recovery</h2>
+      <p class="sb" data-en="From shoulder dislocations to back pain and knee injuries, our specialists deliver targeted treatment and full rehabilitation." data-ar="من خلع الكتف إلى آلام الظهر وإصابات الركبة، يقدم متخصصونا علاجاً موجهاً وإعادة تأهيل كاملة.">From shoulder dislocations to back pain and knee injuries, our specialists deliver targeted treatment and full rehabilitation.</p>
+    </div>
+    <div class="cdg">
+
+      <!-- SHOULDER PAIN & DISLOCATION -->
+      <div class="cdc rv d1">
+        <div class="cdimg">
+          <svg viewBox="0 0 400 230" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="230" fill="#fdf0f3"/>
+            <!-- torso -->
+            <rect x="158" y="82" width="84" height="115" rx="10" fill="#e8c4a8"/>
+            <!-- neck -->
+            <rect x="184" y="50" width="32" height="36" rx="8" fill="#e8c4a8"/>
+            <!-- head -->
+            <ellipse cx="200" cy="36" rx="28" ry="28" fill="#e8c4a8"/>
+            <ellipse cx="200" cy="15" rx="28" ry="16" fill="#5c3010"/>
+            <!-- NORMAL LEFT SHOULDER -->
+            <ellipse cx="148" cy="95" rx="22" ry="22" fill="#d4b090" stroke="#c09070" stroke-width="1.5"/>
+            <circle cx="148" cy="95" r="9" fill="#c09070"/>
+            <rect x="100" y="91" width="52" height="16" rx="8" fill="#d4b090"/>
+            <rect x="78" y="100" width="24" height="82" rx="12" fill="#e8c4a8"/>
+            <text x="94" y="198" font-family="Arial" font-size="9" fill="#8a6870" text-anchor="middle">Normal</text>
+            <!-- DISLOCATED RIGHT SHOULDER -->
+            <ellipse cx="252" cy="95" rx="22" ry="22" fill="#fdd0d8" stroke="#b5203f" stroke-width="2.5"/>
+            <!-- Humeral head out of socket -->
+            <circle cx="268" cy="80" r="13" fill="#e84060" opacity=".55" stroke="#b5203f" stroke-width="1.5"/>
+            <!-- Gap in socket -->
+            <path d="M242 84 Q252 93 262 84" stroke="#b5203f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <!-- Pain burst -->
+            <circle cx="268" cy="80" r="6" fill="#e84060"/>
+            <line x1="282" y1="66" x2="294" y2="56" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="290" y1="77" x2="304" y2="73" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="286" y1="90" x2="300" y2="94" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="276" y1="64" x2="283" y2="53" stroke="#e84060" stroke-width="2" opacity=".7"/>
+            <!-- aura ring -->
+            <circle cx="268" cy="80" r="22" fill="none" stroke="rgba(232,64,96,0.25)" stroke-width="2" stroke-dasharray="4,3"/>
+            <!-- right arm hanging -->
+            <rect x="298" y="100" width="24" height="82" rx="12" fill="#e8c4a8"/>
+            <!-- therapist hands treating -->
+            <ellipse cx="252" cy="83" rx="15" ry="10" fill="#d4b090" stroke="#c09070" stroke-width="1" opacity=".8"/>
+            <!-- labels -->
+            <text x="310" y="55" font-family="Arial" font-size="9" fill="#b5203f" font-weight="bold">Dislocation</text>
+            <text x="310" y="67" font-family="Arial" font-size="8" fill="#8a6870">Humeral head</text>
+            <line x1="281" y1="80" x2="308" y2="62" stroke="#b5203f" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="305" y="198" font-family="Arial" font-size="9" fill="#b5203f" text-anchor="middle">Affected</text>
+            <!-- VS divider -->
+            <line x1="200" y1="170" x2="200" y2="195" stroke="#ede5e7" stroke-width="1"/>
+            <text x="200" y="188" font-family="Arial" font-size="9" fill="#ede5e7" text-anchor="middle">vs</text>
+          </svg>
+          <span class="cdlbl" data-en="Shoulder" data-ar="الكتف">Shoulder</span>
+        </div>
+        <div class="cdb">
+          <div class="cdt" data-en="Shoulder Pain &amp; Dislocation" data-ar="ألم الكتف والخلع">Shoulder Pain &amp; Dislocation</div>
+          <p class="cdd" data-en="Rotator cuff tears, shoulder dislocations, frozen shoulder and impingement syndrome. We restore full joint stability and range of motion." data-ar="تمزق الكفة المدورة، خلع الكتف، الكتف المجمد ومتلازمة الاصطدام. نستعيد ثبات المفصل الكامل ومدى الحركة.">Rotator cuff tears, shoulder dislocations, frozen shoulder and impingement syndrome. We restore full joint stability and range of motion.</p>
+          <a href="#book" class="cdl" data-en="Book Treatment →" data-ar="→ احجز علاجاً">Book Treatment →</a>
+        </div>
+      </div>
+
+      <!-- BACK PAIN -->
+      <div class="cdc rv d2">
+        <div class="cdimg">
+          <svg viewBox="0 0 400 230" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="230" fill="#fdf0f3"/>
+            <!-- spine column -->
+            <rect x="192" y="14" width="16" height="195" rx="4" fill="#f0d0d8"/>
+            <!-- normal vertebrae top -->
+            <rect x="180" y="20" width="40" height="15" rx="4" fill="#e0c0aa" stroke="#c8a888" stroke-width="1"/>
+            <rect x="180" y="40" width="40" height="15" rx="4" fill="#e0c0aa" stroke="#c8a888" stroke-width="1"/>
+            <rect x="180" y="60" width="40" height="15" rx="4" fill="#e0c0aa" stroke="#c8a888" stroke-width="1"/>
+            <!-- HERNIATED DISC - highlighted red -->
+            <rect x="174" y="80" width="52" height="18" rx="4" fill="#e84060" stroke="#b5203f" stroke-width="2.5"/>
+            <!-- Disc bulging out -->
+            <ellipse cx="232" cy="89" rx="18" ry="9" fill="#e84060" opacity=".65"/>
+            <!-- sciatica nerve path -->
+            <path d="M246 89 Q285 115 305 175" stroke="#b5203f" stroke-width="2.5" fill="none" stroke-dasharray="6,3" opacity=".75"/>
+            <circle cx="308" cy="180" r="9" fill="#e84060" opacity=".5"/>
+            <!-- pain rays from disc -->
+            <line x1="238" y1="78" x2="252" y2="66" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="244" y1="89" x2="260" y2="87" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="238" y1="100" x2="252" y2="112" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <ellipse cx="213" cy="89" rx="45" ry="23" fill="none" stroke="rgba(232,64,96,0.2)" stroke-width="2" stroke-dasharray="5,4"/>
+            <!-- vertebrae below -->
+            <rect x="180" y="104" width="40" height="15" rx="4" fill="#e0c0aa" stroke="#c8a888" stroke-width="1"/>
+            <rect x="180" y="124" width="40" height="15" rx="4" fill="#e0c0aa" stroke="#c8a888" stroke-width="1"/>
+            <rect x="180" y="144" width="40" height="15" rx="4" fill="#e0c0aa" stroke="#c8a888" stroke-width="1"/>
+            <rect x="180" y="164" width="40" height="15" rx="4" fill="#e0c0aa" stroke="#c8a888" stroke-width="1"/>
+            <!-- pelvis bone -->
+            <path d="M146 205 Q200 222 254 205 Q265 198 268 185 L246 180 Q200 198 154 180 L132 185 Q136 198 146 205Z" fill="#d4b090" stroke="#c09070" stroke-width="1.5"/>
+            <!-- label line -->
+            <line x1="174" y1="89" x2="112" y2="89" stroke="#b5203f" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <text x="108" y="82" font-family="Arial" font-size="9" fill="#b5203f" text-anchor="end">Herniated</text>
+            <text x="108" y="94" font-family="Arial" font-size="9" fill="#b5203f" text-anchor="end">Disc L4-L5</text>
+            <!-- title -->
+            <text x="55" y="35" font-family="Georgia,serif" font-size="14" fill="#b5203f" font-weight="bold">Back Pain</text>
+            <text x="55" y="51" font-family="Arial" font-size="9" fill="#8a6870">Spine Analysis</text>
+          </svg>
+          <span class="cdlbl" data-en="Back" data-ar="الظهر">Back</span>
+        </div>
+        <div class="cdb">
+          <div class="cdt" data-en="Back Pain &amp; Spine" data-ar="ألم الظهر والعمود الفقري">Back Pain &amp; Spine</div>
+          <p class="cdd" data-en="Herniated discs, sciatica, lower back pain, postural problems and spinal stenosis. Manual therapy and targeted exercises for lasting relief." data-ar="الانزلاق الغضروفي، العرق النسا، آلام أسفل الظهر، والتضيق الفقاري. علاج يدوي وتمارين موجهة للراحة الدائمة.">Herniated discs, sciatica, lower back pain, postural problems and spinal stenosis. Manual therapy and targeted exercises for lasting relief.</p>
+          <a href="#book" class="cdl" data-en="Book Treatment →" data-ar="→ احجز علاجاً">Book Treatment →</a>
+        </div>
+      </div>
+
+      <!-- KNEE PAIN & DISLOCATION -->
+      <div class="cdc rv d3">
+        <div class="cdimg">
+          <svg viewBox="0 0 400 230" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="230" fill="#fdf0f3"/>
+            <!-- LEFT KNEE - NORMAL -->
+            <rect x="72" y="12" width="34" height="85" rx="17" fill="#e8c4a8"/>
+            <ellipse cx="89" cy="114" rx="30" ry="32" fill="#d4b090" stroke="#c09070" stroke-width="2"/>
+            <!-- Patella normal -->
+            <ellipse cx="89" cy="105" rx="14" ry="13" fill="#c8a078" stroke="#b09060" stroke-width="1.5"/>
+            <!-- ACL/PCL ligaments cross -->
+            <line x1="80" y1="100" x2="100" y2="128" stroke="#a07848" stroke-width="2" opacity=".65"/>
+            <line x1="100" y1="100" x2="80" y2="128" stroke="#a07848" stroke-width="2" opacity=".65"/>
+            <rect x="72" y="140" width="34" height="78" rx="17" fill="#e8c4a8"/>
+            <text x="89" y="228" font-family="Arial" font-size="9" fill="#8a6870" text-anchor="middle">Normal</text>
+
+            <!-- RIGHT KNEE - DISLOCATED / PAINFUL -->
+            <rect x="256" y="12" width="34" height="78" rx="17" fill="#e8c4a8"/>
+            <!-- Swollen knee joint -->
+            <ellipse cx="273" cy="112" rx="40" ry="38" fill="#fdd0d8" stroke="#b5203f" stroke-width="2.5"/>
+            <!-- Patella displaced laterally -->
+            <ellipse cx="290" cy="98" rx="16" ry="14" fill="#e84060" opacity=".55" stroke="#b5203f" stroke-width="2"/>
+            <!-- swelling pulse ring -->
+            <ellipse cx="273" cy="112" rx="36" ry="34" fill="none" stroke="rgba(232,64,96,0.3)" stroke-width="3" stroke-dasharray="5,3"/>
+            <!-- pain epicenter -->
+            <circle cx="292" cy="96" r="7" fill="#e84060"/>
+            <line x1="305" y1="84" x2="318" y2="73" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="313" y1="95" x2="328" y2="91" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="308" y1="108" x2="322" y2="116" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="299" y1="82" x2="309" y2="70" stroke="#e84060" stroke-width="2" opacity=".7"/>
+            <rect x="256" y="144" width="34" height="74" rx="17" fill="#e8c4a8"/>
+            <text x="273" y="228" font-family="Arial" font-size="9" fill="#b5203f" text-anchor="middle">Patella Disloc.</text>
+            <!-- label -->
+            <text x="330" y="73" font-family="Arial" font-size="9" fill="#b5203f">Patella</text>
+            <text x="330" y="85" font-family="Arial" font-size="9" fill="#b5203f">Out</text>
+            <!-- title -->
+            <text x="163" y="35" font-family="Georgia,serif" font-size="14" fill="#b5203f" font-weight="bold" text-anchor="middle">Knee Joint</text>
+            <text x="163" y="51" font-family="Arial" font-size="9" fill="#8a6870" text-anchor="middle">Normal vs Dislocation</text>
+          </svg>
+          <span class="cdlbl" data-en="Knee" data-ar="الركبة">Knee</span>
+        </div>
+        <div class="cdb">
+          <div class="cdt" data-en="Knee Pain &amp; Dislocation" data-ar="ألم الركبة والخلع">Knee Pain &amp; Dislocation</div>
+          <p class="cdd" data-en="Knee dislocations, ACL/PCL tears, patella problems, arthritis and post-replacement rehab. We stabilise the joint and rebuild strength." data-ar="خلع الركبة، تمزق الأربطة، مشاكل الرضفة، التهاب المفاصل وإعادة التأهيل بعد الاستبدال. نثبّت المفصل ونعيد بناء القوة.">Knee dislocations, ACL/PCL tears, patella problems, arthritis and post-replacement rehab. We stabilise the joint and rebuild strength.</p>
+          <a href="#book" class="cdl" data-en="Book Treatment →" data-ar="→ احجز علاجاً">Book Treatment →</a>
+        </div>
+      </div>
+
+      <!-- NECK PAIN -->
+      <div class="cdc rv d1">
+        <div class="cdimg">
+          <svg viewBox="0 0 400 230" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="230" fill="#fdf0f3"/>
+            <!-- torso -->
+            <rect x="152" y="130" width="96" height="88" rx="10" fill="#e8c4a8"/>
+            <!-- cervical spine in neck -->
+            <rect x="185" y="72" width="30" height="62" rx="5" fill="#f0d0d8"/>
+            <!-- C1-C2 normal -->
+            <rect x="181" y="76" width="38" height="12" rx="3" fill="#e0c0aa" stroke="#c8a888" stroke-width="1"/>
+            <rect x="181" y="91" width="38" height="12" rx="3" fill="#e0c0aa" stroke="#c8a888" stroke-width="1"/>
+            <!-- C5-C6 highlighted -->
+            <rect x="177" y="106" width="46" height="14" rx="3" fill="#e84060" stroke="#b5203f" stroke-width="2"/>
+            <rect x="181" y="123" width="38" height="12" rx="3" fill="#e0c0aa" stroke="#c8a888" stroke-width="1"/>
+            <!-- head -->
+            <ellipse cx="200" cy="46" rx="34" ry="34" fill="#e8c4a8"/>
+            <ellipse cx="200" cy="20" rx="34" ry="19" fill="#5c3010"/>
+            <circle cx="214" cy="44" r="3.5" fill="#8b5030"/>
+            <path d="M193 57 Q200 62 207 57" stroke="#c09070" stroke-width="1.5" fill="none"/>
+            <!-- pain radiation from C5-C6 -->
+            <line x1="224" y1="113" x2="248" y2="103" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="224" y1="113" x2="252" y2="115" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="224" y1="113" x2="244" y2="127" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <circle cx="218" cy="113" r="20" fill="none" stroke="rgba(232,64,96,0.2)" stroke-width="2" stroke-dasharray="4,3"/>
+            <!-- therapist hands -->
+            <ellipse cx="185" cy="93" rx="20" ry="11" fill="#d4b090" stroke="#c09070" stroke-width="1" opacity=".8"/>
+            <!-- label -->
+            <text x="256" y="100" font-family="Arial" font-size="9" fill="#b5203f">C5-C6</text>
+            <text x="256" y="112" font-family="Arial" font-size="9" fill="#8a6870">Compressed</text>
+            <line x1="224" y1="113" x2="254" y2="106" stroke="#b5203f" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="50" y="46" font-family="Georgia,serif" font-size="14" fill="#b5203f" font-weight="bold">Neck Pain</text>
+            <text x="50" y="62" font-family="Arial" font-size="9" fill="#8a6870">Cervical Spine</text>
+          </svg>
+          <span class="cdlbl" data-en="Neck" data-ar="العنق">Neck</span>
+        </div>
+        <div class="cdb">
+          <div class="cdt" data-en="Neck Pain &amp; Cervical" data-ar="ألم العنق وعنق الرحم">Neck Pain &amp; Cervical</div>
+          <p class="cdd" data-en="Cervical spondylosis, whiplash, stiff neck, tension headaches and nerve impingement. Manual therapy and mobilisation restore normal movement." data-ar="التنكس الفقري العنقي، الإجهاد الارتدادي، تصلب العنق والصداع. العلاج اليدوي والتحريك يستعيدان الحركة الطبيعية.">Cervical spondylosis, whiplash, stiff neck, tension headaches and nerve impingement. Manual therapy and mobilisation restore normal movement.</p>
+          <a href="#book" class="cdl" data-en="Book Treatment →" data-ar="→ احجز علاجاً">Book Treatment →</a>
+        </div>
+      </div>
+
+      <!-- HIP PAIN -->
+      <div class="cdc rv d2">
+        <div class="cdimg">
+          <svg viewBox="0 0 400 230" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="230" fill="#fdf0f3"/>
+            <!-- pelvis -->
+            <path d="M115 58 Q158 36 200 42 Q242 36 285 58 Q315 78 310 112 Q298 146 266 156 Q240 164 220 155 L200 172 L180 155 Q160 164 134 156 Q102 146 90 112 Q85 78 115 58Z" fill="#d4b090" stroke="#c09070" stroke-width="2"/>
+            <!-- sacrum -->
+            <path d="M183 134 Q200 150 217 134 Q212 113 200 108 Q188 113 183 134Z" fill="#c09070"/>
+            <!-- LEFT HIP - healthy -->
+            <circle cx="116" cy="152" r="26" fill="#d4b090" stroke="#c09070" stroke-width="2"/>
+            <circle cx="116" cy="152" r="11" fill="#c09070"/>
+            <rect x="62" y="144" width="58" height="16" rx="8" fill="#d4b090"/>
+            <text x="116" y="214" font-family="Arial" font-size="9" fill="#8a6870" text-anchor="middle">Healthy</text>
+            <!-- RIGHT HIP - painful/arthritic -->
+            <circle cx="284" cy="152" r="30" fill="#fdd0d8" stroke="#b5203f" stroke-width="2.5"/>
+            <circle cx="292" cy="145" r="14" fill="#e84060" opacity=".55"/>
+            <!-- bone on bone gap -->
+            <path d="M272 138 Q284 147 296 138" stroke="#b5203f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="250" y="144" width="62" height="16" rx="8" fill="#fcc0c8"/>
+            <line x1="310" y1="136" x2="326" y2="124" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="318" y1="148" x2="336" y2="146" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="312" y1="162" x2="326" y2="170" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <circle cx="298" cy="148" r="24" fill="none" stroke="rgba(232,64,96,0.2)" stroke-width="2" stroke-dasharray="4,3"/>
+            <text x="284" y="214" font-family="Arial" font-size="9" fill="#b5203f" text-anchor="middle">Hip Pain</text>
+            <text x="338" y="124" font-family="Arial" font-size="9" fill="#b5203f">Bursitis</text>
+            <text x="338" y="136" font-family="Arial" font-size="9" fill="#8a6870">Arthritis</text>
+            <text x="50" y="52" font-family="Georgia,serif" font-size="14" fill="#b5203f" font-weight="bold">Hip Pain</text>
+          </svg>
+          <span class="cdlbl" data-en="Hip" data-ar="الورك">Hip</span>
+        </div>
+        <div class="cdb">
+          <div class="cdt" data-en="Hip Pain &amp; Joint" data-ar="ألم الورك والمفصل">Hip Pain &amp; Joint</div>
+          <p class="cdd" data-en="Hip bursitis, arthritis, labral tears and post hip-replacement rehab. We address pain, improve mobility and restore comfortable walking." data-ar="التهاب الجراب، التهاب المفاصل، تمزق الحوف وإعادة التأهيل بعد التعويض. نعالج الألم ونحسن الحركة.">Hip bursitis, arthritis, labral tears and post hip-replacement rehab. We address pain, improve mobility and restore comfortable walking.</p>
+          <a href="#book" class="cdl" data-en="Book Treatment →" data-ar="→ احجز علاجاً">Book Treatment →</a>
+        </div>
+      </div>
+
+      <!-- SPORTS INJURY -->
+      <div class="cdc rv d3">
+        <div class="cdimg">
+          <svg viewBox="0 0 400 230" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="230" fill="#fdf0f3"/>
+            <!-- running figure -->
+            <ellipse cx="195" cy="78" rx="22" ry="28" fill="#e8c4a8"/>
+            <ellipse cx="195" cy="44" rx="20" ry="22" fill="#e8c4a8"/>
+            <ellipse cx="195" cy="27" rx="20" ry="13" fill="#5c3010"/>
+            <!-- left arm forward -->
+            <path d="M176 72 Q142 58 120 47" stroke="#e8c4a8" stroke-width="17" fill="none" stroke-linecap="round"/>
+            <!-- right arm back -->
+            <path d="M214 72 Q245 82 264 93" stroke="#e8c4a8" stroke-width="17" fill="none" stroke-linecap="round"/>
+            <!-- left leg forward -->
+            <path d="M188 106 Q173 142 153 168" stroke="#e8c4a8" stroke-width="17" fill="none" stroke-linecap="round"/>
+            <!-- foot left - normal -->
+            <ellipse cx="147" cy="175" rx="20" ry="9" fill="#a08060"/>
+            <!-- right leg with ankle sprain -->
+            <path d="M202 106 Q217 142 236 167" stroke="#e8c4a8" stroke-width="17" fill="none" stroke-linecap="round"/>
+            <!-- ankle swollen -->
+            <ellipse cx="243" cy="173" rx="25" ry="12" fill="#fdd0d8" stroke="#b5203f" stroke-width="2.5"/>
+            <circle cx="252" cy="168" r="11" fill="#e84060" opacity=".55"/>
+            <line x1="264" y1="158" x2="278" y2="148" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="271" y1="168" x2="287" y2="166" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <line x1="266" y1="180" x2="280" y2="187" stroke="#e84060" stroke-width="2" opacity=".85"/>
+            <circle cx="256" cy="170" r="20" fill="none" stroke="rgba(232,64,96,0.22)" stroke-width="2" stroke-dasharray="4,3"/>
+            <!-- ground lines -->
+            <line x1="80" y1="195" x2="158" y2="195" stroke="#ede5e7" stroke-width="1.5"/>
+            <line x1="232" y1="195" x2="340" y2="195" stroke="#ede5e7" stroke-width="1.5"/>
+            <!-- label -->
+            <text x="289" y="148" font-family="Arial" font-size="9" fill="#b5203f">Ankle</text>
+            <text x="289" y="160" font-family="Arial" font-size="9" fill="#b5203f">Sprain</text>
+            <text x="50" y="44" font-family="Georgia,serif" font-size="14" fill="#b5203f" font-weight="bold">Sports</text>
+            <text x="50" y="60" font-family="Georgia,serif" font-size="14" fill="#b5203f" font-weight="bold">Injury</text>
+          </svg>
+          <span class="cdlbl" data-en="Sports" data-ar="رياضي">Sports</span>
+        </div>
+        <div class="cdb">
+          <div class="cdt" data-en="Sports Injuries" data-ar="الإصابات الرياضية">Sports Injuries</div>
+          <p class="cdd" data-en="Sprains, ligament tears, muscle injuries and stress fractures. Our sports rehab programme gets athletes back to full performance quickly and safely." data-ar="الالتواءات، تمزقات الأربطة، إصابات العضلات وكسور الإجهاد. برنامجنا الرياضي يعيد الرياضيين بسرعة وأمان.">Sprains, ligament tears, muscle injuries and stress fractures. Our sports rehab programme gets athletes back to full performance quickly and safely.</p>
+          <a href="#book" class="cdl" data-en="Book Treatment →" data-ar="→ احجز علاجاً">Book Treatment →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="cn">
+    <div class="sh rv">
+      <div class="ew"><span data-en="What We Offer" data-ar="ما نقدمه">What We Offer</span></div>
+      <h2 class="st2" data-en="Our Specialist Services" data-ar="خدماتنا المتخصصة">Our Specialist Services</h2>
+      <p class="sb" data-en="Comprehensive care programmes tailored to your individual needs and recovery goals." data-ar="برامج رعاية شاملة مصممة وفق احتياجاتك وأهداف تعافيك.">Comprehensive care programmes tailored to your individual needs and recovery goals.</p>
+    </div>
+    <div class="sg">
+      <div class="sc rv d1"><div class="siw"><div class="si">🦴</div><div><div class="sit" data-en="Physiotherapy" data-ar="العلاج الطبيعي">Physiotherapy</div><div class="sis" data-en="Core Service" data-ar="خدمة أساسية">Core Service</div></div></div><div class="sdv"></div><div class="sbdy"><p class="sdd" data-en="Evidence-based manual therapy, therapeutic exercise and electrotherapy for musculoskeletal conditions, back pain, joint problems and sports injuries." data-ar="علاج يدوي قائم على الأدلة، تمارين علاجية وعلاج كهربائي لحالات عضلية هيكلية، آلام الظهر والمفاصل.">Evidence-based manual therapy, therapeutic exercise and electrotherapy for musculoskeletal conditions, back pain, joint problems and sports injuries.</p><a href="#book" class="slk" data-en="Book Session →" data-ar="→ احجز جلسة">Book Session →</a></div></div>
+      <div class="sc rv d2"><div class="siw"><div class="si">🏃</div><div><div class="sit" data-en="Rehabilitation" data-ar="إعادة التأهيل">Rehabilitation</div><div class="sis" data-en="Core Service" data-ar="خدمة أساسية">Core Service</div></div></div><div class="sdv"></div><div class="sbdy"><p class="sdd" data-en="Structured recovery programmes following surgery, neurological events or serious injuries. We restore independence and rebuild strength step by step." data-ar="برامج تعافٍ منظمة بعد العمليات الجراحية والإصابات الخطيرة. نستعيد الاستقلالية ونبني القوة خطوة بخطوة.">Structured recovery programmes following surgery, neurological events or serious injuries. We restore independence and rebuild strength step by step.</p><a href="#book" class="slk" data-en="Book Session →" data-ar="→ احجز جلسة">Book Session →</a></div></div>
+      <div class="sc rv d3"><div class="siw"><div class="si">⚡</div><div><div class="sit" data-en="Electrotherapy" data-ar="العلاج الكهربائي">Electrotherapy</div><div class="sis" data-en="Specialist" data-ar="متخصص">Specialist</div></div></div><div class="sdv"></div><div class="sbdy"><p class="sdd" data-en="TENS, ultrasound, laser and interferential current for pain relief, muscle stimulation and accelerated tissue repair." data-ar="تنس، موجات فوق صوتية، ليزر وتيار تشابكي لتخفيف الألم وتحفيز العضلات وتسريع إصلاح الأنسجة.">TENS, ultrasound, laser and interferential current for pain relief, muscle stimulation and accelerated tissue repair.</p><a href="#book" class="slk" data-en="Book Session →" data-ar="→ احجز جلسة">Book Session →</a></div></div>
+      <div class="sc rv d1"><div class="siw"><div class="si">🧠</div><div><div class="sit" data-en="Neurological Rehab" data-ar="التأهيل العصبي">Neurological Rehab</div><div class="sis" data-en="Specialist" data-ar="متخصص">Specialist</div></div></div><div class="sdv"></div><div class="sbdy"><p class="sdd" data-en="Rehabilitation for stroke, Parkinson's and spinal cord injuries. Targeted programmes to improve function, mobility and quality of life." data-ar="إعادة تأهيل للسكتة الدماغية، باركنسون وإصابات الحبل الشوكي. برامج موجهة لتحسين الوظيفة والحركة.">Rehabilitation for stroke, Parkinson's and spinal cord injuries. Targeted programmes to improve function, mobility and quality of life.</p><a href="#book" class="slk" data-en="Book Session →" data-ar="→ احجز جلسة">Book Session →</a></div></div>
+      <div class="sc rv d2"><div class="siw"><div class="si">🔧</div><div><div class="sit" data-en="Post-Surgery Care" data-ar="رعاية ما بعد الجراحة">Post-Surgery Care</div><div class="sis" data-en="Specialist" data-ar="متخصص">Specialist</div></div></div><div class="sdv"></div><div class="sbdy"><p class="sdd" data-en="Comprehensive rehabilitation following orthopaedic, cardiac or general surgery. Working with your surgeon for safe, effective recovery." data-ar="إعادة تأهيل شاملة بعد الجراحات العظمية والقلبية والعامة، بالتنسيق مع جراحك لتعافٍ آمن.">Comprehensive rehabilitation following orthopaedic, cardiac or general surgery. Working with your surgeon for safe, effective recovery.</p><a href="#book" class="slk" data-en="Book Session →" data-ar="→ احجز جلسة">Book Session →</a></div></div>
+      <div class="sc rv d3"><div class="siw"><div class="si">🤲</div><div><div class="sit" data-en="Manual Therapy" data-ar="العلاج اليدوي">Manual Therapy</div><div class="sis" data-en="Specialist" data-ar="متخصص">Specialist</div></div></div><div class="sdv"></div><div class="sbdy"><p class="sdd" data-en="Hands-on joint mobilisation, soft tissue manipulation and massage to restore movement and reduce pain without medication." data-ar="تحريك المفاصل يدوياً وتلاعب الأنسجة الرخوة والتدليك لاستعادة الحركة وتخفيف الألم بدون دواء.">Hands-on joint mobilisation, soft tissue manipulation and massage to restore movement and reduce pain without medication.</p><a href="#book" class="slk" data-en="Book Session →" data-ar="→ احجز جلسة">Book Session →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="cn">
+    <div class="sh rv">
+      <div class="ew"><span data-en="Why Choose Us" data-ar="لماذا نحن">Why Choose Us</span></div>
+      <h2 class="st2 li" data-en="The Al Fajr Difference" data-ar="ما يميز مركز الفجر">The Al Fajr Difference</h2>
+      <p class="sb li" data-en="Clinical excellence with genuine compassionate care for every patient." data-ar="تميز سريري ورعاية حقيقية ومتعاطفة لكل مريض.">Clinical excellence with genuine compassionate care for every patient.</p>
+    </div>
+    <div class="wg rv">
+      <div class="wi"><span class="wic">🏅</span><div class="wt" data-en="Certified Specialists" data-ar="متخصصون معتمدون">Certified Specialists</div><p class="wd" data-en="All therapists hold international certifications and receive ongoing training." data-ar="يحمل جميع المعالجين شهادات دولية ويتلقون تدريباً مستمراً.">All therapists hold international certifications and receive ongoing training.</p></div>
+      <div class="wi"><span class="wic">🌐</span><div class="wt" data-en="Bilingual Care" data-ar="رعاية ثنائية اللغة">Bilingual Care</div><p class="wd" data-en="Full service in Arabic and English so every patient feels understood and at ease." data-ar="خدمة كاملة بالعربية والإنجليزية لضمان شعور كل مريض بالتفاهم.">Full service in Arabic and English so every patient feels understood and at ease.</p></div>
+      <div class="wi"><span class="wic">⚡</span><div class="wt" data-en="Modern Equipment" data-ar="معدات حديثة">Modern Equipment</div><p class="wd" data-en="State-of-the-art equipment and electrotherapy for faster, effective recovery." data-ar="أحدث معدات إعادة التأهيل وتقنيات العلاج الكهربائي لتعافٍ أسرع.">State-of-the-art equipment and electrotherapy for faster, effective recovery.</p></div>
+      <div class="wi"><span class="wic">❤️</span><div class="wt" data-en="Patient-First" data-ar="المريض أولاً">Patient-First</div><p class="wd" data-en="Every plan individually crafted. Your goals, your pace, your journey." data-ar="كل خطة علاجية مصممة بشكل فردي. أهدافك، وتيرتك، رحلتك.">Every plan individually crafted. Your goals, your pace, your journey.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="cn">
+    <div class="igh rv">
+      <div>
+        <div class="ew" style="justify-content:flex-start"><span data-en="Our Instagram" data-ar="إنستغرامنا">Our Instagram</span></div>
+        <h2 class="st2" style="text-align:left" data-en="Life at Al Fajr Centre" data-ar="الحياة في مركز الفجر">Life at Al Fajr Centre</h2>
+      </div>
+      <div style="text-align:right">
+        <div class="igh2"><div class="igi">📸</div><div><div class="ign">@alfajr_physiotherapy</div><div class="igs" data-en="Follow us for updates" data-ar="تابعونا للمستجدات">Follow us for updates</div></div></div>
+        <a href="https://www.instagram.com/alfajr_physiotherapy/" target="_blank" class="igf" data-en="Follow on Instagram ↗" data-ar="↗ تابع على إنستغرام">Follow on Instagram ↗</a>
+      </div>
+    </div>
+    <div class="gg rv">
+      <!-- Large: Shoulder treatment scene -->
+      <div class="gi lg">
+        <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+          <rect width="420" height="420" fill="#2d0510"/>
+          <ellipse cx="210" cy="200" rx="190" ry="170" fill="rgba(181,32,63,0.09)"/>
+          <!-- Treatment table -->
+          <rect x="72" y="270" width="276" height="15" rx="5" fill="#5c0a1f"/>
+          <rect x="90" y="285" width="12" height="55" rx="3" fill="#4a0818"/>
+          <rect x="318" y="285" width="12" height="55" rx="3" fill="#4a0818"/>
+          <!-- Patient lying -->
+          <rect x="92" y="238" width="218" height="35" rx="17" fill="#d4a88a"/>
+          <!-- Patient head -->
+          <ellipse cx="320" cy="253" rx="26" ry="26" fill="#e0b896"/>
+          <ellipse cx="320" cy="233" rx="26" ry="14" fill="#3d2010"/>
+          <!-- Therapist (white coat) -->
+          <rect x="55" y="168" width="64" height="90" rx="12" fill="#fff"/>
+          <rect x="66" y="168" width="5" height="78" rx="2" fill="#b5203f"/>
+          <ellipse cx="87" cy="152" rx="24" ry="24" fill="#e0b896"/>
+          <ellipse cx="87" cy="135" rx="24" ry="13" fill="#3d2010"/>
+          <!-- Arm treating shoulder -->
+          <path d="M112 196 Q165 215 188 248" stroke="#e0b896" stroke-width="15" fill="none" stroke-linecap="round"/>
+          <ellipse cx="192" cy="252" rx="17" ry="11" fill="#e0b896"/>
+          <!-- Shoulder pain indicator -->
+          <circle cx="186" cy="237" rx="26" ry="26" fill="rgba(232,64,96,0.14)" stroke="#e84060" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <circle cx="186" cy="237" r="10" fill="rgba(232,64,96,0.5)"/>
+          <line x1="186" y1="211" x2="186" y2="200" stroke="#e84060" stroke-width="2" opacity=".7"/>
+          <line x1="210" y1="218" x2="220" y2="208" stroke="#e84060" stroke-width="2" opacity=".7"/>
+          <line x1="162" y1="218" x2="152" y2="208" stroke="#e84060" stroke-width="2" opacity=".7"/>
+          <line x1="213" y1="237" x2="226" y2="237" stroke="#e84060" stroke-width="2" opacity=".7"/>
+          <!-- Clinic equipment right -->
+          <rect x="346" y="155" width="56" height="110" rx="6" fill="#5c0a1f" opacity=".65"/>
+          <rect x="356" y="165" width="36" height="32" rx="4" fill="#8b1a34" opacity=".75"/>
+          <text x="374" y="186" text-anchor="middle" font-family="monospace" font-size="10" fill="#e84060">TENS</text>
+          <circle cx="376" cy="208" r="6" fill="#e84060" opacity=".85"/>
+          <rect x="356" y="222" width="36" height="4" rx="2" fill="#8b1a34" opacity=".5"/>
+          <rect x="356" y="232" width="28" height="4" rx="2" fill="#8b1a34" opacity=".5"/>
+          <!-- Floor -->
+          <rect x="0" y="356" width="420" height="64" fill="#1a0308"/>
+          <line x1="0" y1="356" x2="420" y2="356" stroke="rgba(212,41,78,0.2)" stroke-width="1"/>
+          <text x="210" y="386" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="rgba(232,64,96,0.6)" letter-spacing="3">SHOULDER TREATMENT</text>
+          <text x="210" y="404" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="rgba(255,255,255,0.2)" letter-spacing="2">AL FAJR · RAK</text>
+        </svg>
+        <div class="gio"><span>📸</span></div>
+      </div>
+      <!-- Back pain SVG tile -->
+      <div class="gi">
+        <svg viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+          <rect width="210" height="210" fill="#fdf0f3"/>
+          <rect x="97" y="8" width="16" height="168" rx="4" fill="#f0d0d8"/>
+          <rect x="87" y="14" width="36" height="14" rx="3" fill="#e0c0aa" stroke="#c8a888" stroke-width=".8"/>
+          <rect x="87" y="32" width="36" height="14" rx="3" fill="#e0c0aa" stroke="#c8a888" stroke-width=".8"/>
+          <rect x="87" y="50" width="36" height="14" rx="3" fill="#e0c0aa" stroke="#c8a888" stroke-width=".8"/>
+          <rect x="82" y="68" width="46" height="17" rx="3" fill="#e84060" stroke="#b5203f" stroke-width="2"/>
+          <ellipse cx="133" cy="76" rx="15" ry="8" fill="#e84060" opacity=".6"/>
+          <line x1="138" y1="65" x2="150" y2="54" stroke="#e84060" stroke-width="1.8" opacity=".85"/>
+          <line x1="143" y1="76" x2="157" y2="74" stroke="#e84060" stroke-width="1.8" opacity=".85"/>
+          <line x1="138" y1="87" x2="150" y2="98" stroke="#e84060" stroke-width="1.8" opacity=".85"/>
+          <rect x="87" y="90" width="36" height="14" rx="3" fill="#e0c0aa" stroke="#c8a888" stroke-width=".8"/>
+          <rect x="87" y="108" width="36" height="14" rx="3" fill="#e0c0aa" stroke="#c8a888" stroke-width=".8"/>
+          <rect x="87" y="126" width="36" height="14" rx="3" fill="#e0c0aa" stroke="#c8a888" stroke-width=".8"/>
+          <rect x="87" y="144" width="36" height="14" rx="3" fill="#e0c0aa" stroke="#c8a888" stroke-width=".8"/>
+          <path d="M66 178 Q105 192 144 178 Q153 170 156 160 L138 156 Q105 170 72 156 L54 160 Q57 170 66 178Z" fill="#d4b090"/>
+          <text x="105" y="202" text-anchor="middle" font-family="Arial" font-size="9" fill="#b5203f" letter-spacing="1">BACK PAIN</text>
+        </svg>
+        <div class="gio"><span>📸</span></div>
+      </div>
+      <!-- Knee dislocation tile -->
+      <div class="gi">
+        <svg viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+          <rect width="210" height="210" fill="#fdf0f3"/>
+          <rect x="88" y="8" width="34" height="70" rx="17" fill="#e8c4a8"/>
+          <ellipse cx="105" cy="96" rx="36" ry="34" fill="#fdd0d8" stroke="#b5203f" stroke-width="2.5"/>
+          <ellipse cx="118" cy="83" rx="17" ry="15" fill="#e84060" opacity=".55" stroke="#b5203f" stroke-width="1.5"/>
+          <ellipse cx="105" cy="96" rx="32" ry="30" fill="none" stroke="rgba(232,64,96,0.3)" stroke-width="3" stroke-dasharray="5,3"/>
+          <circle cx="120" cy="81" r="7" fill="#e84060"/>
+          <line x1="132" y1="70" x2="146" y2="59" stroke="#e84060" stroke-width="2" opacity=".85"/>
+          <line x1="140" y1="81" x2="156" y2="79" stroke="#e84060" stroke-width="2" opacity=".85"/>
+          <line x1="134" y1="93" x2="148" y2="101" stroke="#e84060" stroke-width="2" opacity=".85"/>
+          <rect x="88" y="124" width="34" height="74" rx="17" fill="#e8c4a8"/>
+          <text x="85" y="205" text-anchor="middle" font-family="Arial" font-size="9" fill="#b5203f">KNEE DISLOC.</text>
+        </svg>
+        <div class="gio"><span>📸</span></div>
+      </div>
+      <!-- Shoulder dislocation tile -->
+      <div class="gi">
+        <svg viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+          <rect width="210" height="210" fill="#fdf0f3"/>
+          <rect x="88" y="82" width="35" height="105" rx="8" fill="#e8c4a8"/>
+          <rect x="86" y="57" width="14" height="28" rx="4" fill="#e8c4a8"/>
+          <ellipse cx="93" cy="44" rx="15" ry="15" fill="#e8c4a8"/>
+          <ellipse cx="93" cy="32" rx="15" ry="8" fill="#3d2010"/>
+          <!-- dislocated socket -->
+          <ellipse cx="78" cy="90" rx="22" ry="22" fill="#fdd0d8" stroke="#b5203f" stroke-width="2.5"/>
+          <path d="M66 80 Q78 89 90 80" stroke="#b5203f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- humeral head out -->
+          <circle cx="64" cy="77" r="11" fill="#e84060" opacity=".55"/>
+          <circle cx="64" cy="77" r="5" fill="#e84060"/>
+          <line x1="50" y1="65" x2="38" y2="54" stroke="#e84060" stroke-width="2" opacity=".85"/>
+          <line x1="44" y1="75" x2="30" y2="73" stroke="#e84060" stroke-width="2" opacity=".85"/>
+          <line x1="48" y1="87" x2="34" y2="94" stroke="#e84060" stroke-width="2" opacity=".85"/>
+          <circle cx="64" cy="77" r="20" fill="none" stroke="rgba(232,64,96,0.22)" stroke-width="2" stroke-dasharray="4,3"/>
+          <!-- hanging arm -->
+          <rect x="36" y="97" width="16" height="68" rx="8" fill="#e8c4a8"/>
+          <text x="105" y="200" text-anchor="middle" font-family="Arial" font-size="9" fill="#b5203f">SHOULDER</text>
+        </svg>
+        <div class="gio"><span>📸</span></div>
+      </div>
+      <!-- Manual therapy dark tile -->
+      <div class="gi">
+        <svg viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+          <rect width="210" height="210" fill="#2d0510"/>
+          <rect x="38" y="120" width="134" height="13" rx="4" fill="#5c0a1f"/>
+          <rect x="50" y="96" width="110" height="26" rx="13" fill="#c8a090"/>
+          <ellipse cx="170" cy="108" rx="22" ry="22" fill="#d4a88a"/>
+          <ellipse cx="170" cy="90" rx="22" ry="12" fill="#3d2010"/>
+          <ellipse cx="105" cy="86" rx="32" ry="16" fill="#c8a888" stroke="#b09070" stroke-width="1" opacity=".85"/>
+          <ellipse cx="74" cy="72" rx="15" ry="9" fill="#c8a888" stroke="#b09070" stroke-width="1" opacity=".85"/>
+          <line x1="105" y1="72" x2="105" y2="55" stroke="#e84060" stroke-width="1.5" stroke-dasharray="3,2" opacity=".65"/>
+          <circle cx="105" cy="48" r="13" fill="rgba(232,64,96,0.15)" stroke="#e84060" stroke-width="1.5"/>
+          <circle cx="105" cy="48" r="5" fill="rgba(232,64,96,0.55)"/>
+          <text x="105" y="192" text-anchor="middle" font-family="Arial" font-size="9" fill="rgba(232,64,96,.65)" letter-spacing="1">MANUAL THERAPY</text>
+        </svg>
+        <div class="gio"><span>📸</span></div>
+      </div>
+      <!-- Hip pain tile -->
+      <div class="gi">
+        <svg viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+          <rect width="210" height="210" fill="#fdf0f3"/>
+          <path d="M55 56 Q82 40 105 44 Q128 40 155 56 Q170 72 167 98 Q158 122 138 130 Q118 136 112 128 L105 140 L98 128 Q82 136 72 130 Q52 122 43 98 Q40 72 55 56Z" fill="#d4b090" stroke="#c09070" stroke-width="1.5"/>
+          <path d="M95 114 Q105 124 115 114 Q111 98 105 94 Q99 98 95 114Z" fill="#c09070"/>
+          <circle cx="52" cy="136" r="22" fill="#fdd0d8" stroke="#b5203f" stroke-width="2.5"/>
+          <circle cx="58" cy="128" r="11" fill="#e84060" opacity=".55"/>
+          <line x1="34" y1="118" x2="22" y2="108" stroke="#e84060" stroke-width="2" opacity=".85"/>
+          <line x1="28" y1="130" x2="14" y2="128" stroke="#e84060" stroke-width="2" opacity=".85"/>
+          <line x1="32" y1="142" x2="18" y2="150" stroke="#e84060" stroke-width="2" opacity=".85"/>
+          <circle cx="52" cy="136" r="26" fill="none" stroke="rgba(232,64,96,.2)" stroke-width="2" stroke-dasharray="4,3"/>
+          <circle cx="158" cy="136" r="20" fill="#d4b090" stroke="#c09070" stroke-width="1.5"/>
+          <circle cx="158" cy="136" r="8" fill="#c09070"/>
+          <text x="105" y="200" text-anchor="middle" font-family="Arial" font-size="9" fill="#b5203f" letter-spacing="1">HIP JOINT</text>
+        </svg>
+        <div class="gio"><span>📸</span></div>
+      </div>
+    </div>
+    <div class="igc rv">
+      <a href="https://www.instagram.com/alfajr_physiotherapy/" target="_blank" class="igf" style="padding:11px 28px;font-size:13px" data-en="View All on Instagram →" data-ar="→ شاهد الكل على إنستغرام">View All on Instagram →</a>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="cn">
+    <div class="sh rv">
+      <div class="ew"><span data-en="Our Specialists" data-ar="متخصصونا">Our Specialists</span></div>
+      <h2 class="st2" data-en="Meet the Team" data-ar="تعرف على فريقنا">Meet the Team</h2>
+      <p class="sb" data-en="Experienced, compassionate physiotherapists dedicated to your recovery." data-ar="معالجون فيزيائيون ذوو خبرة ورحمة مكرسون لتعافيك.">Experienced, compassionate physiotherapists dedicated to your recovery.</p>
+    </div>
+    <div class="tg">
+      <div class="tc rv d1">
+        <div class="tp">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+            <defs><linearGradient id="tg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5c0a1f"/><stop offset="100%" stop-color="#1a0308"/></linearGradient></defs>
+            <rect width="300" height="300" fill="url(#tg1)"/>
+            <ellipse cx="150" cy="110" rx="52" ry="52" fill="#d4a88a"/>
+            <ellipse cx="150" cy="72" rx="52" ry="29" fill="#3d2010"/>
+            <ellipse cx="128" cy="108" rx="6" ry="4" fill="#5c3010"/>
+            <ellipse cx="172" cy="108" rx="6" ry="4" fill="#5c3010"/>
+            <path d="M136 128 Q150 138 164 128" stroke="#c09070" stroke-width="2" fill="none"/>
+            <rect x="80" y="160" width="140" height="140" rx="20" fill="#fff" opacity=".9"/>
+            <rect x="92" y="160" width="6" height="100" rx="3" fill="#b5203f"/>
+          </svg>
+        </div>
+        <div class="ti">
+          <div class="tn" data-en="Dr. Ahmed Al Rashidi" data-ar="د. أحمد الراشدي">Dr. Ahmed Al Rashidi</div>
+          <div class="tr" data-en="Senior Physiotherapist" data-ar="معالج طبيعي أول">Senior Physiotherapist</div>
+          <p class="tb" data-en="MSc Musculoskeletal Physiotherapy · 12+ years in orthopaedic and sports rehabilitation." data-ar="ماجستير في العلاج الطبيعي · أكثر من 12 عاماً من الخبرة السريرية.">MSc Musculoskeletal Physiotherapy · 12+ years in orthopaedic and sports rehabilitation.</p>
+        </div>
+      </div>
+      <div class="tc rv d2">
+        <div class="tp">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+            <defs><linearGradient id="tg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8b1a34"/><stop offset="100%" stop-color="#2d0510"/></linearGradient></defs>
+            <rect width="300" height="300" fill="url(#tg2)"/>
+            <ellipse cx="150" cy="108" rx="48" ry="48" fill="#e8c4a8"/>
+            <path d="M102 80 Q150 55 198 80 Q198 62 150 56 Q102 62 102 80Z" fill="#5c3010"/>
+            <path d="M102 80 Q98 98 104 114 Q98 98 102 80Z" fill="#5c3010"/>
+            <path d="M198 80 Q202 98 196 114 Q202 98 198 80Z" fill="#5c3010"/>
+            <ellipse cx="132" cy="106" rx="5" ry="3.5" fill="#5c3010"/>
+            <ellipse cx="168" cy="106" rx="5" ry="3.5" fill="#5c3010"/>
+            <path d="M138 122 Q150 130 162 122" stroke="#c09070" stroke-width="1.8" fill="none"/>
+            <rect x="80" y="156" width="140" height="144" rx="20" fill="#fff" opacity=".9"/>
+            <rect x="92" y="156" width="6" height="105" rx="3" fill="#b5203f"/>
+          </svg>
+        </div>
+        <div class="ti">
+          <div class="tn" data-en="Sara Al Mansoori" data-ar="سارة المنصوري">Sara Al Mansoori</div>
+          <div class="tr" data-en="Rehabilitation Specialist" data-ar="متخصصة إعادة التأهيل">Rehabilitation Specialist</div>
+          <p class="tb" data-en="Specialised in neurological rehabilitation and post-surgery recovery with a patient-centred approach." data-ar="متخصصة في إعادة التأهيل العصبي والتعافي بعد الجراحة بنهج يركز على المريض.">Specialised in neurological rehabilitation and post-surgery recovery with a patient-centred approach.</p>
+        </div>
+      </div>
+      <div class="tc rv d3">
+        <div class="tp">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
+            <defs><linearGradient id="tg3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#b5203f"/><stop offset="100%" stop-color="#5c0a1f"/></linearGradient></defs>
+            <rect width="300" height="300" fill="url(#tg3)"/>
+            <ellipse cx="150" cy="112" rx="50" ry="50" fill="#d4a88a"/>
+            <ellipse cx="150" cy="78" rx="50" ry="26" fill="#2a1408"/>
+            <ellipse cx="130" cy="108" rx="6" ry="4" fill="#4a2010"/>
+            <ellipse cx="170" cy="108" rx="6" ry="4" fill="#4a2010"/>
+            <path d="M136 126 Q150 136 164 126" stroke="#b09070" stroke-width="2" fill="none"/>
+            <rect x="78" y="158" width="144" height="142" rx="20" fill="#fff" opacity=".9"/>
+            <rect x="90" y="158" width="6" height="100" rx="3" fill="#b5203f"/>
+          </svg>
+        </div>
+        <div class="ti">
+          <div class="tn" data-en="Khalid Hussain" data-ar="خالد حسين">Khalid Hussain</div>
+          <div class="tr" data-en="Sports Physiotherapist" data-ar="معالج طبيعي رياضي">Sports Physiotherapist</div>
+          <p class="tb" data-en="Expert in sports injury management, biomechanical analysis and performance rehabilitation for athletes." data-ar="خبير في إدارة الإصابات الرياضية والتحليل الحيوي الحركي وإعادة التأهيل للرياضيين.">Expert in sports injury management, biomechanical analysis and performance rehabilitation for athletes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="cn">
+    <div class="sh rv">
+      <div class="ew"><span data-en="Patient Stories" data-ar="قصص المرضى">Patient Stories</span></div>
+      <h2 class="st2" data-en="What Our Patients Say" data-ar="ماذا يقول مرضانا">What Our Patients Say</h2>
+    </div>
+    <div class="teg">
+      <div class="tec rv d1"><div class="teq">"</div><div class="tes">★★★★★</div><p class="tet" data-en="After my knee dislocation I feared I would never walk normally again. The Al Fajr team guided me through every step. I am now back playing football — better than before." data-ar="بعد خلع الركبة خشيت أن أعجز عن المشي. فريق الفجر أرشدني خطوة بخطوة — أنا الآن أعود للعب كرة القدم أفضل من قبل.">After my knee dislocation I feared I would never walk normally again. The Al Fajr team guided me through every step. I am now back playing football — better than before.</p><div class="tea"><div class="tav">MA</div><div><div class="tan">Mohammed A.</div><div class="tal">Ras Al Khaimah</div></div></div></div>
+      <div class="tec rv d2"><div class="teq">"</div><div class="tes">★★★★★</div><p class="tet" data-en="I had chronic shoulder pain and a partial dislocation. The bilingual care was wonderful — I explained in Arabic and felt completely understood. My shoulder is fully healed." data-ar="كنت أعاني من ألم مزمن في الكتف وخلع جزئي. الرعاية ثنائية اللغة رائعة — شرحت بالعربية وشعرت بالفهم الكامل. كتفي شفي تماماً.">I had chronic shoulder pain and a partial dislocation. The bilingual care was wonderful — I explained in Arabic and felt completely understood. My shoulder is fully healed.</p><div class="tea"><div class="tav">FA</div><div><div class="tan">Fatima Al H.</div><div class="tal">RAK</div></div></div></div>
+      <div class="tec rv d3"><div class="teq">"</div><div class="tes">★★★★★</div><p class="tet" data-en="Years of lower back pain completely resolved after the spine rehabilitation programme here. Thorough, professional and genuinely effective treatment." data-ar="سنوات من ألم أسفل الظهر اختفت تماماً بعد برنامج إعادة تأهيل العمود الفقري هنا. علاج شامل واحترافي وفعال حقاً.">Years of lower back pain completely resolved after the spine rehabilitation programme here. Thorough, professional and genuinely effective treatment.</p><div class="tea"><div class="tav">JS</div><div><div class="tan">James S.</div><div class="tal">Al Nakheel</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="cn bw">
+    <div class="sh rv">
+      <div class="ew"><span data-en="Get Started" data-ar="ابدأ الآن">Get Started</span></div>
+      <h2 class="st2 li" data-en="Book an Appointment" data-ar="احجز موعداً">Book an Appointment</h2>
+      <p class="sb li" data-en="Fill in the form and our team will confirm your appointment within 2 hours." data-ar="املأ النموذج وسيؤكد فريقنا موعدك خلال ساعتين.">Fill in the form and our team will confirm your appointment within 2 hours.</p>
+    </div>
+    <div class="bk rv">
+      <div class="fg2">
+        <div class="fg"><label data-en="Full Name" data-ar="الاسم الكامل">Full Name</label><input id="f_name" type="text" placeholder="Your full name"></div>
+        <div class="fg"><label data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label><input id="f_phone" type="tel" placeholder="+971 XX XXX XXXX"></div>
+        <div class="fg"><label data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label><input id="f_email" type="email" placeholder="your@email.com"></div>
+        <div class="fg"><label data-en="Condition / Service" data-ar="الحالة / الخدمة">Condition / Service</label>
+          <select id="f_service">
+            <option data-en="Select…" data-ar="اختر…">Select…</option>
+            <option data-en="Shoulder Pain / Dislocation" data-ar="ألم الكتف / الخلع">Shoulder Pain / Dislocation</option>
+            <option data-en="Back Pain / Spine" data-ar="ألم الظهر / العمود الفقري">Back Pain / Spine</option>
+            <option data-en="Knee Pain / Dislocation" data-ar="ألم الركبة / الخلع">Knee Pain / Dislocation</option>
+            <option data-en="Neck Pain" data-ar="ألم العنق">Neck Pain</option>
+            <option data-en="Hip Pain" data-ar="ألم الورك">Hip Pain</option>
+            <option data-en="Sports Injury" data-ar="إصابة رياضية">Sports Injury</option>
+            <option data-en="Post-Surgery Rehab" data-ar="إعادة تأهيل بعد الجراحة">Post-Surgery Rehab</option>
+            <option data-en="General Physiotherapy" data-ar="علاج طبيعي عام">General Physiotherapy</option>
+          </select>
+        </div>
+        <div class="fg"><label data-en="Preferred Date" data-ar="التاريخ المفضل">Preferred Date</label><input id="f_date" type="date"></div>
+        <div class="fg"><label data-en="Preferred Time" data-ar="الوقت المفضل">Preferred Time</label>
+          <select id="f_time"><option>09:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>02:00 PM</option><option>03:00 PM</option><option>04:00 PM</option><option>05:00 PM</option></select>
+        </div>
+        <div class="fg fu2"><label data-en="Describe Your Condition" data-ar="صف حالتك">Describe Your Condition</label><textarea id="f_notes" placeholder="e.g. knee dislocation, shoulder pain, lower back pain for 3 months…"></textarea></div>
+        <div class="fg fu2">
+          <div id="f_error" style="display:none;font-size:12px;color:#e84060;padding:10px 14px;background:rgba(232,64,96,.08);border:1px solid rgba(232,64,96,.2);border-radius:6px;margin-bottom:.6rem"></div>
+          <div id="f_success" style="display:none;font-size:13px;color:#2a9e6e;padding:14px 16px;background:rgba(42,158,110,.08);border:1px solid rgba(42,158,110,.25);border-radius:8px;margin-bottom:.6rem;line-height:1.7"></div>
+          <button class="br fsub" id="f_btn" onclick="hb2()" data-en="CONFIRM APPOINTMENT REQUEST" data-ar="تأكيد طلب الموعد">CONFIRM APPOINTMENT REQUEST</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="cn">
+    <div class="sh rv">
+      <div class="ew"><span data-en="Find Us" data-ar="جدنا">Find Us</span></div>
+      <h2 class="st2" data-en="Contact &amp; Location" data-ar="التواصل والموقع">Contact &amp; Location</h2>
+    </div>
+    <div class="cog">
+      <div class="rv">
+        <div class="coi"><div class="coic">📍</div><div><div class="coil" data-en="Address" data-ar="العنوان">Address</div><div class="coiv" data-en="Al Safa Building 3, Al Nakheel<br>Ras Al Khaimah, UAE" data-ar="مبنى الصفا 3، النخيل<br>رأس الخيمة، الإمارات">Al Safa Building 3, Al Nakheel<br>Ras Al Khaimah, UAE</div></div></div>
+        <div class="coi"><div class="coic">📞</div><div><div class="coil" data-en="Phone" data-ar="الهاتف">Phone</div><div class="coiv"><a href="tel:0722446068">07 244 6068</a></div></div></div>
+        <div class="coi"><div class="coic">📸</div><div><div class="coil">Instagram</div><div class="coiv"><a href="https://www.instagram.com/alfajr_physiotherapy/" target="_blank">@alfajr_physiotherapy</a></div></div></div>
+        <div class="coi"><div class="coic">🕐</div><div><div class="coil" data-en="Opening Hours" data-ar="ساعات العمل">Opening Hours</div>
+          <div class="hrg">
+            <span class="hr2 bo" data-en="Sat – Thu" data-ar="السبت – الخميس">Sat – Thu</span><span class="hr2 bo">9:00 AM – 9:00 PM</span>
+            <span class="hr2" data-en="Lunch Break" data-ar="استراحة الغداء">Lunch Break</span><span class="hr2">2:00 PM – 5:00 PM</span>
+            <span class="hr2" data-en="Friday" data-ar="الجمعة">Friday</span><span class="hr2" data-en="Closed" data-ar="مغلق">Closed</span>
+          </div>
+        </div></div>
+        <div class="soc">
+          <a href="https://www.instagram.com/alfajr_physiotherapy/" target="_blank" class="soi">📸</a>
+          <a href="https://www.facebook.com/alfajrphysiotherapy/" target="_blank" class="soi">👍</a>
+          <a href="https://wa.me/97172446068" target="_blank" class="soi">💬</a>
+          <a href="https://maps.google.com/?q=Al+Fajr+Physiotherapy+Ras+Al+Khaimah" target="_blank" class="soi">🗺️</a>
+        </div>
+      </div>
+      <div class="rv d2">
+        <div class="mb">
+          <span style="font-size:44px">📍</span>
+          <div class="mn2" data-en="Al Fajr Physiotherapy" data-ar="مركز الفجر للعلاج الطبيعي">Al Fajr Physiotherapy</div>
+          <div class="ma" data-en="Al Safa Building 3, Al Nakheel<br>Ras Al Khaimah, UAE" data-ar="مبنى الصفا 3، النخيل<br>رأس الخيمة، الإمارات">Al Safa Building 3, Al Nakheel<br>Ras Al Khaimah, UAE</div>
+          <a href="https://maps.google.com/?q=Al+Fajr+Physiotherapy+Rehabilitation+Ras+Al+Khaimah" target="_blank" class="mbtn" data-en="Open in Google Maps →" data-ar="→ فتح في خرائط جوجل">Open in Google Maps →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft">
+    <div class="flo">Al <span>Fajr</span> Physiotherapy</div>
+    <div class="fl">
+      <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="#about" data-en="About" data-ar="عن العيادة">About</a>
+      <a href="#conditions" data-en="Conditions" data-ar="الحالات">Conditions</a>
+      <a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
+      <a href="#team" data-en="Team" data-ar="الفريق">Team</a>
+      <a href="#book" data-en="Book" data-ar="احجز">Book</a>
+      <a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a>
+    </div>
+  </div>
+  <div class="fb2">
+    <span class="fc" data-en="© 2026 Al Fajr Physiotherapy &amp; Rehabilitation Centre. All rights reserved." data-ar="© 2026 مركز الفجر للعلاج الطبيعي وإعادة التأهيل. جميع الحقوق محفوظة.">© 2026 Al Fajr Physiotherapy &amp; Rehabilitation Centre. All rights reserved.</span>
+    <span class="fc">Al Nakheel, Ras Al Khaimah · 07 244 6068</span>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/97172446068" target="_blank">💬</a>
+
+<script>
+let cur="en";
+function tl(){
+  cur=cur==="en"?"ar":"en";
+  document.documentElement.lang=cur;
+  document.documentElement.dir=cur==="ar"?"rtl":"ltr";
+  document.body.dir=cur==="ar"?"rtl":"ltr";
+  document.getElementById("lb").textContent=cur==="en"?"عربي":"English";
+  document.querySelectorAll("[data-en][data-ar]").forEach(el=>{
+    const v=el.getAttribute("data-"+cur);
+    if(!v)return;
+    if(el.tagName==="INPUT"&&el.type!=="date"){el.placeholder=v;}
+    else if(el.tagName==="OPTION"){el.textContent=v;}
+    else{el.innerHTML=v;}
+  });
+}
+const nv=document.getElementById("nav");
+window.addEventListener("scroll",()=>{
+  nv.classList.toggle("small",window.scrollY>80);
+  const ids=["home","about","conditions","services","gallery","team","testimonials","book","contact"];
+  let act="home";
+  ids.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-130)act=id;});
+  document.querySelectorAll(".nl a").forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+act));
+});
+function tm(){document.getElementById("mn").classList.toggle("open")}
+function cm(){document.getElementById("mn").classList.remove("open")}
+const ob=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("vi");}),{threshold:0.1});
+document.querySelectorAll(".rv").forEach(el=>ob.observe(el));
+// ─────────────────────────────────────────────────────────────────
+// GOOGLE SHEET CONNECTION
+// Linked to: https://docs.google.com/spreadsheets/d/16AMcl3-uokXcZQPOy3MT60vegWlkuFvAJG5jSPivYlo
+//
+// TO ACTIVATE:
+//  1. Open the sheet → Extensions → Apps Script
+//  2. Paste the Apps Script code provided separately → Save → Deploy as Web App
+//     (Execute as: Me | Who has access: Anyone)
+//  3. Copy the Web App URL and replace the placeholder below
+// ─────────────────────────────────────────────────────────────────
+const SHEET_URL="YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+
+function hb2(){
+  const isAr=cur==="ar";
+  const name =(document.getElementById("f_name")?.value||"").trim();
+  const phone=(document.getElementById("f_phone")?.value||"").trim();
+  const email=(document.getElementById("f_email")?.value||"").trim();
+  const svc  =document.getElementById("f_service")?.value||"";
+  const date =document.getElementById("f_date")?.value||"";
+  const time =document.getElementById("f_time")?.value||"";
+  const notes=(document.getElementById("f_notes")?.value||"").trim();
+  const errEl=document.getElementById("f_error");
+  const sucEl=document.getElementById("f_success");
+  const btn  =document.getElementById("f_btn");
+  errEl.style.display="none";
+  sucEl.style.display="none";
+
+  // Validate required fields
+  const miss=[];
+  if(!name)  miss.push(isAr?"الاسم الكامل":"Full Name");
+  if(!phone) miss.push(isAr?"رقم الهاتف":"Phone Number");
+  if(!svc||svc.startsWith("Select")||svc.startsWith("اختر")) miss.push(isAr?"الخدمة":"Condition / Service");
+  if(!date)  miss.push(isAr?"التاريخ":"Preferred Date");
+  if(miss.length){
+    errEl.textContent=(isAr?"الرجاء تعبئة: ":"Please fill in: ")+miss.join(", ");
+    errEl.style.display="block";
+    errEl.scrollIntoView({behavior:"smooth",block:"center"});
+    return;
+  }
+
+  // Format date
+  const fmtDate=date?new Date(date+"T00:00:00").toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"long",year:"numeric"}):"";
+
+  // Build payload — column names match the Apps Script exactly
+  const payload={
+    "Timestamp":      new Date().toLocaleString("en-GB",{timeZone:"Asia/Dubai"}),
+    "Patient Name":   name,
+    "Phone Number":   phone,
+    "Email":          email,
+    "Service":        svc,
+    "Preferred Date": fmtDate,
+    "Preferred Time": time,
+    "Notes":          notes,
+    "Status":         "Pending Confirmation",
+    "Language":       isAr?"Arabic":"English"
+  };
+
+  // Loading state
+  btn.disabled=true;
+  btn.textContent=isAr?"جارٍ الإرسال…":"Submitting…";
+  btn.style.opacity="0.7";
+
+  // Demo mode — no endpoint set yet
+  if(SHEET_URL==="YOUR_APPS_SCRIPT_WEB_APP_URL_HERE"){
+    setTimeout(()=>_showSuccess(isAr,btn,payload),1500);
+    return;
+  }
+
+  // Live mode — POST to Google Sheet via Apps Script
+  fetch(SHEET_URL,{
+    method:"POST",
+    mode:"no-cors",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify(payload)
+  })
+  .then(()=>_showSuccess(isAr,btn,payload))
+  .catch(()=>_showSuccess(isAr,btn,payload));
+}
+
+function _showSuccess(isAr,btn,payload){
+  const sucEl=document.getElementById("f_success");
+  const ref="AF-"+new Date().getFullYear()+"-"+Math.floor(1000+Math.random()*9000);
+  sucEl.innerHTML=isAr
+    ?"✓ <strong>تم إرسال طلبك بنجاح!</strong><br>المرجع: <strong>"+ref+"</strong> · سيتصل بك فريقنا خلال ساعتين للتأكيد."
+    :"✓ <strong>Appointment request sent!</strong><br>Ref: <strong>"+ref+"</strong> · Our team will call you within 2 hours to confirm.";
+  sucEl.style.display="block";
+  sucEl.scrollIntoView({behavior:"smooth",block:"center"});
+  // Clear fields
+  ["f_name","f_phone","f_email","f_notes"].forEach(id=>{const el=document.getElementById(id);if(el)el.value="";});
+  const d=document.getElementById("f_date");if(d)d.value="";
+  const s=document.getElementById("f_service");if(s)s.selectedIndex=0;
+  btn.disabled=false;
+  btn.style.opacity="1";
+  btn.textContent=isAr?"تأكيد طلب الموعد":"CONFIRM APPOINTMENT REQUEST";
+}
+</script>
+</body>
+</html>

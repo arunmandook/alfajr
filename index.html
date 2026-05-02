@@ -6,7 +6,7 @@
 <title>Al Fajr Physiotherapy & Rehabilitation | Ras Al Khaimah</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&family=Noto+Serif+Arabic:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-     .carousel {
+    /* .carousel {
       position: relative;
       width: 600px;
       margin: auto;
@@ -40,6 +40,51 @@
       border: none;
       padding: 10px;
       cursor: pointer;
+    } */
+
+     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff; /* clean white background */
+    }
+
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      padding: 30px 0;
+    }
+
+    .track {
+      display: flex;
+      width: calc(200%);
+      animation: scroll 20s linear infinite;
+    }
+
+    .track img {
+      width: 300px;
+      height: 200px;
+      margin-right: 20px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Pause on hover */
+    .carousel:hover .track {
+      animation-play-state: paused;
+    }
+
+    /* Optional: smooth edge fade */
+    .carousel {
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     }
   
 :root{
@@ -517,13 +562,25 @@ footer{background:var(--r1);padding:2.75rem 5% 2rem}
       </div>
     </div>
        <div class="carousel">
-          <div class="slides" id="slides">
-              <img src="Gemini_Generated_Image_6vo6nv6vo6nv6vo6 (1).png">
-              <img src="image2.jpg">
-              <img src="image3.jpg">
-              <img src="image4.jpg">
-              <img src="image5.jpg">
-              <img src="image6.jpg">
+              <div class="track">
+
+      <!-- Your 6 images -->
+                   <img src="Gemini_Generated_Image_6vo6nv6vo6nv6vo6 (1).png">
+                     <img src="Gemini_Generated_Image_fzs5jwfzs5jwfzs5.png">
+                     <img src="Gemini_Generated_Image_ks1jnbks1jnbks1j.png">
+                      <img src="Gemini_Generated_Image_sdv344sdv344sdv3.png">
+                     <img src="Gemini_Generated_Image_xaz73qxaz73qxaz7.png">
+                     <img src="Gemini_Generated_Image_xcp81sxcp81sxcp8.png">
+
+      <!-- Duplicate for seamless loop -->
+                     <img src="Gemini_Generated_Image_6vo6nv6vo6nv6vo6 (1).png">
+                     <img src="Gemini_Generated_Image_fzs5jwfzs5jwfzs5.png">
+                     <img src="Gemini_Generated_Image_ks1jnbks1jnbks1j.png">
+                      <img src="Gemini_Generated_Image_sdv344sdv344sdv3.png">
+                     <img src="Gemini_Generated_Image_xaz73qxaz73qxaz7.png">
+                     <img src="Gemini_Generated_Image_xcp81sxcp81sxcp8.png">
+
+    </div>
   </div>
          <div class="buttons">
     <button onclick="prev()">❮</button>

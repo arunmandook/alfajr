@@ -330,64 +330,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating glass cards — sit on top of image */}
-            <div ref={floatRef} style={{ position: "relative", zIndex: 1, height: "100%",
-              display: "flex", flexDirection: "column", gap: "16px",
-              alignItems: "flex-end", justifyContent: "center", padding: "32px 0" }}>
-
-              {/* Card 1 — progress */}
-              <div ref={card1Ref} className="float-a glass rounded-2xl p-6 w-72 border-pulse-red"
-                style={{ border: "1px solid rgba(232,64,96,0.2)" }}>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-lg flex-shrink-0"
-                    style={{ background: "rgba(232,64,96,0.2)" }}>🏃</div>
-                  <div>
-                    <div className="text-white text-sm font-medium font-body">Sports Rehabilitation</div>
-                    <div className="text-white/70 text-xs font-body">Back to peak performance</div>
-                  </div>
-                </div>
-                <div className="h-1.5 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.08)" }}>
-                  <div className="h-full rounded-full w-[92%]"
-                    style={{ background: "linear-gradient(90deg, #e84060, #c9a96e)",
-                      animation: "progress-fill 1.5s 1.5s cubic-bezier(0.4,0,0.2,1) both" }} />
-                </div>
-                <div className="flex justify-between mt-2">
-                  <span className="text-white/55 text-xs font-body">Recovery progress</span>
-                  <span className="text-xs font-body" style={{ color: "#e84060" }}>92%</span>
-                </div>
-              </div>
-
-              {/* Card 2 — next available */}
-              <div ref={card2Ref} className="float-b glass rounded-2xl p-5 w-64" style={{ marginRight: "32px" }}>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-white/60 text-xs tracking-wide uppercase font-body">Next Available</span>
-                  <span className="text-xs px-2 py-0.5 rounded-full font-body"
-                    style={{ background: "rgba(232,64,96,0.18)", color: "#e84060",
-                      animation: "pulse-opacity 2s ease-in-out infinite" }}>Today</span>
-                </div>
-                <div className="text-white font-heading text-xl font-light">2:00 PM</div>
-                <div className="text-white/70 text-xs mt-1 font-body">Dr. Sarah Al-Ahmad · Physiotherapy</div>
-              </div>
-
-              {/* Card 3 — patient avatars */}
-              <div ref={card3Ref} className="float-c glass rounded-2xl p-5 w-72">
-                <div className="flex -space-x-2 mb-3">
-                  {(["#e84060","#c9a96e","#5c8ae8","#60b5e8"] as string[]).map((c, i) => (
-                    <div key={i}
-                      className="w-8 h-8 rounded-full flex items-center justify-center text-xs text-white font-body"
-                      style={{ background: c, border: "2px solid rgba(255,255,255,0.12)", animationDelay: `${i * 0.1}s` }}>
-                      {["A","K","S","M"][i]}
-                    </div>
-                  ))}
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs text-white/50 font-body"
-                    style={{ background: "rgba(255,255,255,0.07)", border: "2px solid rgba(255,255,255,0.1)" }}>+42</div>
-                </div>
-                <div className="text-white text-sm font-body">
-                  Patients treated <strong className="text-white">this month</strong>
-                </div>
-                <div className="text-white/55 text-xs mt-1 font-body">⭐ 4.9 average rating</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

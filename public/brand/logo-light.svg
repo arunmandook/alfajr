@@ -1,0 +1,8 @@
+<svg width="170" height="40" viewBox="0 0 170 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Al Fajr Rehabilitation Centre">
+  <!-- Inverted logo for dark backgrounds (footer). -->
+  <circle cx="20" cy="20" r="18" fill="#ffffff" fill-opacity="0.1"/>
+  <path d="M12 24c3-8 9-12 16-12-4 2-7 6-8 12" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="26" cy="13" r="2.4" fill="#e84060"/>
+  <text x="46" y="20" font-family="'Cormorant Garamond', Georgia, serif" font-size="19" font-weight="600" fill="#ffffff">Al Fajr</text>
+  <text x="46" y="33" font-family="'Outfit', system-ui, sans-serif" font-size="7.5" letter-spacing="1.5" fill="#ffffff" fill-opacity="0.7">REHABILITATION CENTRE</text>
+</svg>

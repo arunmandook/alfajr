@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * CSS variables are seeded from config/client.config.ts in app/layout.tsx
+ * (inline <style>), so they always match the Tailwind palette. Components can
+ * use either the Tailwind tokens (bg-primary) or the raw vars for fine control.
+ */
+:root {
+  --color-primary: #0f766e;
+  --color-secondary: #0c4a6e;
+  --color-accent: #f59e0b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  color: theme("colors.foreground");
+  background-color: theme("colors.background");
+  -webkit-font-smoothing: antialiased;
+}
+
+/* When the document is Arabic, prefer the Arabic font stack everywhere. */
+html[dir="rtl"] body {
+  font-family: var(--font-arabic), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), system-ui, sans-serif;
+}
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6 {
+  font-family: var(--font-arabic), system-ui, sans-serif;
+}
+
+@layer utilities {
+  /* Logical-direction helpers so layouts mirror automatically under RTL. */
+  .container-px {
+    padding-inline: 1rem;
+  }
+
+  /* Scroll-reveal: elements start hidden and fade-up when they enter the
+     viewport (the <Reveal> component toggles .vi via IntersectionObserver). */
+  .rv {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .rv.vi {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .rv {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+  }
+}

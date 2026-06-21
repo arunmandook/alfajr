@@ -1,10 +1,19 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { clientConfig } from "@/config/client.config";
 import MagneticButton from "@/components/ui/MagneticButton";
 
+const HERO_IMAGES = [
+  { src: "https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg?auto=compress&cs=tinysrgb&w=900&h=1100&fit=crop", label: "Strength Training" },
+  { src: "https://images.pexels.com/photos/3076509/pexels-photo-3076509.jpeg?auto=compress&cs=tinysrgb&w=900&h=1100&fit=crop", label: "Flexibility & Rehab" },
+  { src: "https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=900&h=1100&fit=crop", label: "Cardio Recovery" },
+  { src: "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=900&h=1100&fit=crop", label: "Active Recovery" },
+];
+
 export default function Hero() {
+  const [imgIdx, setImgIdx] = useState(0);
+  const [prevIdx, setPrevIdx] = useState<number | null>(null);
   const sectionRef  = useRef<HTMLElement>(null);
   const canvasRef   = useRef<HTMLCanvasElement>(null);
   const headingRef  = useRef<HTMLHeadingElement>(null);
@@ -149,6 +158,17 @@ export default function Hero() {
       tl.fromTo(card3Ref.current, { x: 50, opacity: 0, y: -10 }, { x: 0, opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, "-=0.7");
   }, []);
 
+  /* ── Hero image carousel ─────────────────────────────────── */
+  useEffect(() => {
+    const t = setInterval(() => {
+      setImgIdx(prev => {
+        setPrevIdx(prev);
+        return (prev + 1) % HERO_IMAGES.length;
+      });
+    }, 4000);
+    return () => clearInterval(t);
+  }, []);
+
   const scrollToBook = () => document.querySelector("#book")?.scrollIntoView({ behavior: "smooth" });
 
   return (
@@ -259,22 +279,55 @@ export default function Hero() {
           {/* RIGHT — hero image + floating glass cards */}
           <div className="hidden lg:block" style={{ position: "relative", minHeight: "580px" }}>
 
-            {/* Background image panel */}
+            {/* Carousel image panel */}
             <div style={{ position: "absolute", inset: 0, borderRadius: "28px", overflow: "hidden" }}>
+              {/* Outgoing image fades out */}
+              {prevIdx !== null && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={`prev-${prevIdx}`}
+                  src={HERO_IMAGES[prevIdx].src}
+                  alt=""
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%",
+                    objectFit: "cover", objectPosition: "center 30%",
+                    animation: "heroFadeOut 0.9s ease forwards" }}
+                />
+              )}
+              {/* Active image fades in */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg?auto=compress&cs=tinysrgb&w=900&h=1100&fit=crop"
-                alt="Athletic strength training at Al Fajr Rehabilitation"
-                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }}
+              <img key={`cur-${imgIdx}`}
+                src={HERO_IMAGES[imgIdx].src}
+                alt={HERO_IMAGES[imgIdx].label}
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%",
+                  objectFit: "cover", objectPosition: "center 30%",
+                  animation: "heroFadeIn 0.9s ease forwards" }}
               />
-              {/* Dark vignette so cards stay readable */}
+              {/* Dark vignette */}
               <div style={{ position: "absolute", inset: 0,
                 background: "linear-gradient(135deg, rgba(8,0,3,0.55) 0%, rgba(8,0,3,0.2) 60%, rgba(8,0,3,0.45) 100%)" }} />
-              {/* Subtle red brand tint */}
+              {/* Red brand tint */}
               <div style={{ position: "absolute", inset: 0, background: "rgba(92,10,31,0.22)" }} />
-              {/* Left fade to blend with hero background */}
+              {/* Left fade */}
               <div style={{ position: "absolute", top: 0, left: 0, bottom: 0, width: "30%",
                 background: "linear-gradient(to right, rgba(8,0,3,0.7) 0%, transparent 100%)" }} />
+              {/* Dot indicators */}
+              <div style={{ position: "absolute", bottom: 16, left: "50%", transform: "translateX(-50%)",
+                display: "flex", gap: 6, zIndex: 2 }}>
+                {HERO_IMAGES.map((_, i) => (
+                  <button key={i} onClick={() => { setPrevIdx(imgIdx); setImgIdx(i); }}
+                    style={{ width: i === imgIdx ? 20 : 6, height: 6, borderRadius: 99,
+                      background: i === imgIdx ? "#e84060" : "rgba(255,255,255,0.3)",
+                      border: "none", cursor: "pointer", padding: 0,
+                      transition: "all 0.3s ease" }} />
+                ))}
+              </div>
+              {/* Image label */}
+              <div style={{ position: "absolute", bottom: 40, right: 16,
+                background: "rgba(0,0,0,0.5)", backdropFilter: "blur(8px)",
+                border: "1px solid rgba(232,64,96,0.25)", borderRadius: 99,
+                padding: "4px 12px", color: "rgba(255,255,255,0.7)", fontSize: 10,
+                letterSpacing: "0.12em", textTransform: "uppercase" }}>
+                {HERO_IMAGES[imgIdx].label}
+              </div>
             </div>
 
             {/* Floating glass cards — sit on top of image */}
@@ -361,6 +414,14 @@ export default function Hero() {
         @keyframes pulse-opacity {
           0%, 100% { opacity: 1; }
           50%      { opacity: 0.6; }
+        }
+        @keyframes heroFadeIn {
+          from { opacity: 0; transform: scale(1.04); }
+          to   { opacity: 1; transform: scale(1); }
+        }
+        @keyframes heroFadeOut {
+          from { opacity: 1; transform: scale(1); }
+          to   { opacity: 0; transform: scale(0.97); }
         }
       `}</style>
     </section>

@@ -4,9 +4,8 @@
  */
 
 // Layout
-export { Header } from "./layout/Header";
-export type { NavItem } from "./layout/Header";
-export { Footer } from "./layout/Footer";
+export { default as Header } from "./layout/Header";
+export { default as Footer } from "./layout/Footer";
 
 // UI primitives
 export { Section } from "./ui/Section";
@@ -16,7 +15,7 @@ export { CTAButton } from "./ui/CTAButton";
 export type { CTAButtonProps } from "./ui/CTAButton";
 export { BookingCTA } from "./ui/BookingCTA";
 export { CallButton } from "./ui/CallButton";
-export { WhatsAppFloat } from "./ui/WhatsAppFloat";
+export { default as WhatsAppFloat } from "./ui/WhatsAppFloat";
 export { MapEmbed } from "./ui/MapEmbed";
 export { OpeningHours } from "./ui/OpeningHours";
 export { SocialLinks } from "./ui/SocialLinks";

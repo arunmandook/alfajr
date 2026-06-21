@@ -2,74 +2,322 @@
 @tailwind components;
 @tailwind utilities;
 
-/**
- * CSS variables are seeded from config/client.config.ts in app/layout.tsx
- * (inline <style>), so they always match the Tailwind palette. Components can
- * use either the Tailwind tokens (bg-primary) or the raw vars for fine control.
- */
 :root {
-  --color-primary: #0f766e;
-  --color-secondary: #0c4a6e;
-  --color-accent: #f59e0b;
+  --color-primary: #5c0a1f;
+  --color-secondary: #2d0510;
+  --color-accent: #e84060;
+  --color-gold: #c9a96e;
+  --color-surface: rgba(255,255,255,0.04);
+  --color-border: rgba(255,255,255,0.08);
 }
 
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; }
+
+html { scroll-behavior: auto; }
 
 body {
   font-family: var(--font-body), system-ui, sans-serif;
-  color: theme("colors.foreground");
-  background-color: theme("colors.background");
+  background: #08020a;
+  color: #fff;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-/* When the document is Arabic, prefer the Arabic font stack everywhere. */
-html[dir="rtl"] body {
-  font-family: var(--font-arabic), system-ui, sans-serif;
-}
+html[dir="rtl"] body { font-family: var(--font-arabic), system-ui, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), system-ui, sans-serif;
+  font-family: var(--font-heading), Georgia, serif;
+  line-height: 1.08;
 }
+
 html[dir="rtl"] h1,
 html[dir="rtl"] h2,
-html[dir="rtl"] h3,
-html[dir="rtl"] h4,
-html[dir="rtl"] h5,
-html[dir="rtl"] h6 {
+html[dir="rtl"] h3 {
   font-family: var(--font-arabic), system-ui, sans-serif;
 }
 
-@layer utilities {
-  /* Logical-direction helpers so layouts mirror automatically under RTL. */
-  .container-px {
-    padding-inline: 1rem;
-  }
-
-  /* Scroll-reveal: elements start hidden and fade-up when they enter the
-     viewport (the <Reveal> component toggles .vi via IntersectionObserver). */
-  .rv {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .rv.vi {
-    opacity: 1;
-    transform: none;
-  }
+/* ── Glassmorphism surface ─────────────────────────────────── */
+.glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.glass-dark {
+  background: rgba(8,2,10,0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(232,64,96,0.12);
 }
 
-/* Respect users who prefer reduced motion. */
+/* ── Gradient text ─────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, rgba(232,64,96,0.9) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-text-gold {
+  background: linear-gradient(135deg, #c9a96e 0%, #f0d5a0 50%, #c9a96e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section backgrounds ───────────────────────────────────── */
+.bg-dark   { background: #08020a; }
+.bg-dark-2 { background: #0e050f; }
+.bg-light  { background: #faf8f9; color: #1a0a0d; }
+.bg-light h1, .bg-light h2, .bg-light h3,
+.bg-light h4, .bg-light h5, .bg-light h6 { color: #1a0a0d; }
+
+/* ── Scroll-triggered reveal (GSAP-driven) ─────────────────── */
+.reveal { opacity: 0; transform: translateY(40px); }
+.reveal-left { opacity: 0; transform: translateX(-40px); }
+.reveal-right { opacity: 0; transform: translateX(40px); }
+.char { display: inline-block; }
+
+/* ── Magnetic button ───────────────────────────────────────── */
+.magnetic { display: inline-flex; cursor: pointer; }
+
+/* ── Scroll progress bar ───────────────────────────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #e84060, #c9a96e);
+  z-index: 9999;
+  transform-origin: left;
+  transition: transform 0.1s linear;
+}
+
+/* ── Card hover glow ───────────────────────────────────────── */
+.card-glow {
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+.card-glow:hover {
+  box-shadow: 0 0 40px rgba(232,64,96,0.15), 0 20px 60px rgba(0,0,0,0.4);
+  transform: translateY(-6px);
+}
+
+/* ── Horizontal scroll wrapper ─────────────────────────────── */
+.h-scroll-container { overflow: hidden; }
+.h-scroll-track { display: flex; width: max-content; }
+
+/* ── Custom scrollbar ──────────────────────────────────────── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #e84060; border-radius: 2px; }
+
+/* ── Form inputs premium style ─────────────────────────────── */
+.input-premium {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  border-radius: 8px;
+  padding: 14px 18px;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+  outline: none;
+}
+.input-premium::placeholder { color: rgba(255,255,255,0.3); }
+.input-premium:focus {
+  border-color: #e84060;
+  box-shadow: 0 0 0 3px rgba(232,64,96,0.12);
+  background: rgba(255,255,255,0.06);
+}
+
+.input-light {
+  background: #fff;
+  border: 1.5px solid #e8e0e4;
+  color: #1a0a0d;
+  border-radius: 8px;
+  padding: 14px 18px;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+.input-light::placeholder { color: #a08890; }
+.input-light:focus {
+  border-color: #e84060;
+  box-shadow: 0 0 0 3px rgba(232,64,96,0.1);
+}
+
+/* ── Step progress dots ────────────────────────────────────── */
+.step-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  transition: all 0.4s ease;
+}
+.step-dot.active { background: #e84060; transform: scale(1.4); }
+.step-dot.done   { background: rgba(232,64,96,0.4); }
+
+/* ── Body hotspot ──────────────────────────────────────────── */
+.body-hotspot {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  fill: transparent;
+}
+.body-hotspot:hover { fill: rgba(232,64,96,0.3); }
+.body-hotspot.active { fill: rgba(232,64,96,0.4); }
+
+.hotspot-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: #e84060;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 0 0 4px rgba(232,64,96,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hotspot-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(232,64,96,0.4);
+  animation: pulse-ring 2s infinite;
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* ── Stat counter ──────────────────────────────────────────── */
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+}
+
+/* ── Testimonial slider ────────────────────────────────────── */
+.testimonial-card {
+  flex-shrink: 0;
+  width: 380px;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.5s ease;
+}
+
+/* ── Service card ──────────────────────────────────────────── */
+.service-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(232,64,96,0.08) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.service-card:hover::before { opacity: 1; }
+.service-card:hover {
+  border-color: rgba(232,64,96,0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 60px rgba(232,64,96,0.08);
+}
+
+/* ── Team card ─────────────────────────────────────────────── */
+.team-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #100812;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.4s ease;
+}
+.team-card:hover { border-color: rgba(201,169,110,0.3); transform: translateY(-6px); }
+
+/* ── Exit intent ───────────────────────────────────────────── */
+.exit-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8,2,10,0.85);
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* ── WhatsApp float ────────────────────────────────────────── */
+.wa-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 1000;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.wa-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(37,211,102,0.5);
+}
+
+/* ── Recovery timeline ─────────────────────────────────────── */
+.timeline-item {
+  flex-shrink: 0;
+  width: 320px;
+  padding: 40px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  position: relative;
+}
+.timeline-item::after {
+  content: attr(data-step);
+  position: absolute;
+  top: 40px; right: 40px;
+  font-family: var(--font-heading);
+  font-size: 80px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.04);
+  line-height: 1;
+}
+
+/* ── Noise texture overlay ─────────────────────────────────── */
+.noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+/* ── Gradient divider ──────────────────────────────────────── */
+.gradient-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(232,64,96,0.4), transparent);
+}
+
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .rv {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  .reveal, .reveal-left, .reveal-right {
     opacity: 1 !important;
     transform: none !important;
-    transition: none;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
   }
 }

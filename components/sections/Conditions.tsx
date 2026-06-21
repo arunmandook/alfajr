@@ -12,7 +12,7 @@ const CONDITIONS = [
     recovery: "4–8 weeks",
     color: "#e84060",
     bg: "linear-gradient(160deg, #2a0610 0%, #5a0f20 100%)",
-    img: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=700&h=520&fit=crop&q=85",
+    img: "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=700&h=520&fit=crop",
   },
   {
     id: "shoulder",
@@ -23,7 +23,7 @@ const CONDITIONS = [
     recovery: "6–16 weeks",
     color: "#d43f5a",
     bg: "linear-gradient(160deg, #250510 0%, #550d22 100%)",
-    img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&h=520&fit=crop&q=85",
+    img: "https://images.unsplash.com/photo-1645005512968-0c1fe99f0093?w=700&h=520&fit=crop&q=85",
   },
   {
     id: "back",
@@ -34,7 +34,7 @@ const CONDITIONS = [
     recovery: "6–12 weeks",
     color: "#c93555",
     bg: "linear-gradient(160deg, #200408 0%, #4d0c1a 100%)",
-    img: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=700&h=520&fit=crop&q=85",
+    img: "https://images.unsplash.com/photo-1706353399656-210cca727a33?w=700&h=520&fit=crop&q=85",
   },
   {
     id: "hip",
@@ -45,7 +45,7 @@ const CONDITIONS = [
     recovery: "8–20 weeks",
     color: "#bf2e4e",
     bg: "linear-gradient(160deg, #1e0408 0%, #480a18 100%)",
-    img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&h=520&fit=crop&q=85",
+    img: "https://images.pexels.com/photos/20860616/pexels-photo-20860616.jpeg?auto=compress&cs=tinysrgb&w=700&h=520&fit=crop",
   },
   {
     id: "knee",
@@ -56,7 +56,7 @@ const CONDITIONS = [
     recovery: "8–24 weeks",
     color: "#e84060",
     bg: "linear-gradient(160deg, #280610 0%, #5c1020 100%)",
-    img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&h=520&fit=crop&q=85",
+    img: "https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?w=700&h=520&fit=crop&q=85",
   },
   {
     id: "ankle",
@@ -67,7 +67,7 @@ const CONDITIONS = [
     recovery: "4–12 weeks",
     color: "#d94a62",
     bg: "linear-gradient(160deg, #220408 0%, #520e1c 100%)",
-    img: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=700&h=520&fit=crop&q=85",
+    img: "https://images.unsplash.com/photo-1545463913-5083aa7359a6?w=700&h=520&fit=crop&q=85",
   },
 ];
 
@@ -128,40 +128,46 @@ export default function Conditions() {
                 className="grid grid-cols-1 md:grid-cols-2">
 
                 {/* LEFT — Real photo panel */}
-                <div className="relative overflow-hidden min-h-[280px] md:min-h-[440px]">
+                <div style={{ position: "relative", overflow: "hidden", minHeight: "280px" }}
+                  className="md:min-h-[440px]">
                   {/* Photo */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={c.img}
                     alt={c.name}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    style={{ objectPosition: "center top" }}
+                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
                   />
 
-                  {/* Dark gradient overlay so text/badge is readable */}
-                  <div className="absolute inset-0"
-                    style={{ background: "linear-gradient(to right, rgba(10,1,4,0.15) 0%, rgba(10,1,4,0.55) 100%), linear-gradient(to top, rgba(10,1,4,0.7) 0%, transparent 50%)" }} />
+                  {/* Subtle dark vignette for text readability */}
+                  <div style={{ position: "absolute", inset: 0,
+                    background: "linear-gradient(to top, rgba(10,1,4,0.8) 0%, rgba(10,1,4,0.1) 55%, rgba(10,1,4,0.25) 100%)" }} />
 
-                  {/* Tinted colour overlay for brand feel */}
-                  <div className="absolute inset-0"
-                    style={{ background: `${c.bg}`, opacity: 0.45, mixBlendMode: "multiply" }} />
+                  {/* Light red brand tint */}
+                  <div style={{ position: "absolute", inset: 0, background: "rgba(92,10,31,0.2)" }} />
 
                   {/* Slide number watermark */}
-                  <span className="absolute top-5 left-6 font-heading text-7xl font-light select-none pointer-events-none"
-                    style={{ color: "rgba(255,255,255,0.06)", lineHeight: 1 }}>
+                  <span style={{ position: "absolute", top: 20, left: 24, color: "rgba(255,255,255,0.06)", lineHeight: 1 }}
+                    className="font-heading text-7xl font-light select-none pointer-events-none">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
 
                   {/* Condition badge top-right */}
-                  <div className="absolute top-5 right-5 px-3 py-1.5 rounded-full text-[10px] font-body font-medium tracking-wide"
-                    style={{ background: "rgba(0,0,0,0.55)", border: `1px solid ${c.color}50`, color: c.color, backdropFilter: "blur(8px)" }}>
+                  <div style={{ position: "absolute", top: 20, right: 20,
+                    background: "rgba(0,0,0,0.55)", border: `1px solid ${c.color}50`,
+                    color: c.color, backdropFilter: "blur(8px)",
+                    padding: "6px 12px", borderRadius: 999 }}
+                    className="text-[10px] font-body font-medium tracking-wide">
                     {c.subtitle.split(",")[0]}
                   </div>
 
                   {/* Recovery badge bottom-left */}
-                  <div className="absolute bottom-5 left-5 flex items-center gap-2 px-4 py-2 rounded-full text-xs font-body"
-                    style={{ background: "rgba(0,0,0,0.6)", border: "1px solid rgba(232,64,96,0.35)", color: "rgba(255,255,255,0.85)", backdropFilter: "blur(8px)" }}>
-                    <svg className="w-3.5 h-3.5" style={{ color: c.color }} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <div style={{ position: "absolute", bottom: 20, left: 20,
+                    background: "rgba(0,0,0,0.6)", border: "1px solid rgba(232,64,96,0.35)",
+                    color: "rgba(255,255,255,0.85)", backdropFilter: "blur(8px)",
+                    padding: "8px 16px", borderRadius: 999,
+                    display: "flex", alignItems: "center", gap: 8 }}
+                    className="text-xs font-body">
+                    <svg width="14" height="14" style={{ color: c.color }} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                       <circle cx="12" cy="12" r="10"/><path strokeLinecap="round" d="M12 6v6l4 2"/>
                     </svg>
                     Recovery: <span className="font-semibold text-white">{c.recovery}</span>

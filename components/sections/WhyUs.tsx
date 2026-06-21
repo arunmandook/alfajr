@@ -33,7 +33,7 @@ export default function WhyUs() {
 
   return (
     <section ref={sectionRef} id="about" className="py-32 relative overflow-hidden"
-      style={{ background: "#0e050f" }}>
+      style={{ background: "#130208" }}>
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse 50% 60% at 20% 50%, rgba(92,10,31,0.12) 0%, transparent 70%)" }} />
 
@@ -57,7 +57,7 @@ export default function WhyUs() {
                 <AnimatedCounter end={s.value} suffix={s.suffix} />
               </div>
               <div className="text-white font-body text-sm font-medium mb-1">{s.label}</div>
-              <div className="text-white/30 font-body text-xs">{s.sub}</div>
+              <div className="text-white/55 font-body text-xs">{s.sub}</div>
             </div>
           ))}
         </div>
@@ -68,7 +68,7 @@ export default function WhyUs() {
             <div key={i} className="reveal service-card p-8">
               <div className="text-4xl mb-6">{p.icon}</div>
               <h3 className="font-heading text-white text-xl font-light mb-3">{p.title}</h3>
-              <p className="text-white/40 font-body text-sm leading-relaxed">{p.desc}</p>
+              <p className="text-white/70 font-body text-sm leading-relaxed">{p.desc}</p>
             </div>
           ))}
         </div>

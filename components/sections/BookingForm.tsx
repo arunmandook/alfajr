@@ -72,7 +72,7 @@ export default function BookingForm() {
 
   return (
     <section ref={sectionRef} id="book" className="py-32 relative overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #0a030c 0%, #12060f 100%)" }}>
+      style={{ background: "linear-gradient(180deg, #100106 0%, #180309 100%)" }}>
       <div className="absolute inset-0 pointer-events-none"
         style={{ background: "radial-gradient(ellipse 60% 70% at 50% 50%, rgba(232,64,96,0.06) 0%, transparent 70%)" }} />
 
@@ -88,7 +88,7 @@ export default function BookingForm() {
             <h2 className="font-heading font-light text-white mb-3" style={{ fontSize: "clamp(32px,4vw,56px)" }}>
               Book Your <em style={{ fontStyle: "italic", color: "#e84060" }}>Consultation</em>
             </h2>
-            <p className="text-white/40 font-body">No waiting lists. We&apos;ll confirm your slot within 2 hours.</p>
+            <p className="text-white/70 font-body">No waiting lists. We&apos;ll confirm your slot within 2 hours.</p>
           </div>
 
           {/* Step indicators */}
@@ -116,7 +116,7 @@ export default function BookingForm() {
                 </div>
                 <h3 className="font-heading text-white text-2xl font-light mb-3">Request Received!</h3>
                 <p className="text-white/50 font-body mb-6">We&apos;ll WhatsApp you within 2 hours to confirm your appointment.</p>
-                <p className="text-white/30 font-body text-sm">Or call us now: <a href="tel:+97143558821" className="text-white/60 hover:text-white transition-colors">+971 4 355 8821</a></p>
+                <p className="text-white/55 font-body text-sm">Or call us now: <a href="tel:+97143558821" className="text-white/60 hover:text-white transition-colors">+971 4 355 8821</a></p>
               </div>
             ) : (
               <>
@@ -125,17 +125,17 @@ export default function BookingForm() {
                   <div className="space-y-5">
                     <h3 className="font-heading text-white text-xl font-light mb-6">Your Details</h3>
                     <div>
-                      <label className="block text-xs tracking-wider uppercase text-white/30 font-body mb-2">Full Name *</label>
+                      <label className="block text-xs tracking-wider uppercase text-white/55 font-body mb-2">Full Name *</label>
                       <input className="input-premium w-full" placeholder="e.g. Ahmed Al Rashidi"
                         value={form.name} onChange={e => set("name", e.target.value)} />
                     </div>
                     <div>
-                      <label className="block text-xs tracking-wider uppercase text-white/30 font-body mb-2">Phone Number *</label>
+                      <label className="block text-xs tracking-wider uppercase text-white/55 font-body mb-2">Phone Number *</label>
                       <input className="input-premium w-full" type="tel" placeholder="+971 50 123 4567"
                         value={form.phone} onChange={e => set("phone", e.target.value)} />
                     </div>
                     <div>
-                      <label className="block text-xs tracking-wider uppercase text-white/30 font-body mb-2">Email Address</label>
+                      <label className="block text-xs tracking-wider uppercase text-white/55 font-body mb-2">Email Address</label>
                       <input className="input-premium w-full" type="email" placeholder="optional"
                         value={form.email} onChange={e => set("email", e.target.value)} />
                     </div>
@@ -160,7 +160,7 @@ export default function BookingForm() {
                       ))}
                     </div>
                     <div className="mt-5">
-                      <label className="block text-xs tracking-wider uppercase text-white/30 font-body mb-2">Additional notes</label>
+                      <label className="block text-xs tracking-wider uppercase text-white/55 font-body mb-2">Additional notes</label>
                       <textarea className="input-premium w-full resize-none" rows={3} placeholder="Tell us more about your condition..."
                         value={form.message} onChange={e => set("message", e.target.value)} />
                     </div>
@@ -196,7 +196,7 @@ export default function BookingForm() {
                 <div className="flex items-center justify-between mt-8">
                   {step > 1 ? (
                     <button onClick={() => { setStep((s) => (s - 1) as Step); setError(""); }}
-                      className="text-sm font-body text-white/30 hover:text-white/60 transition-colors">
+                      className="text-sm font-body text-white/55 hover:text-white/60 transition-colors">
                       ← Back
                     </button>
                   ) : <div />}

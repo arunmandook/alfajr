@@ -182,7 +182,7 @@ export default function Hero() {
                   style={{ background: "rgba(232,64,96,0.15)" }}>🏃</div>
                 <div>
                   <div className="text-white text-sm font-medium font-body">Sports Rehabilitation</div>
-                  <div className="text-white/40 text-xs font-body">Back to peak performance</div>
+                  <div className="text-white/70 text-xs font-body">Back to peak performance</div>
                 </div>
               </div>
               <div className="h-1.5 rounded-full bg-white/5 overflow-hidden">
@@ -190,7 +190,7 @@ export default function Hero() {
                   style={{ background: "linear-gradient(90deg, #e84060, #c9a96e)" }} />
               </div>
               <div className="flex justify-between mt-2">
-                <span className="text-white/30 text-xs font-body">Recovery progress</span>
+                <span className="text-white/55 text-xs font-body">Recovery progress</span>
                 <span className="text-xs font-body" style={{ color: "#e84060" }}>92%</span>
               </div>
             </div>
@@ -203,7 +203,7 @@ export default function Hero() {
                   style={{ background: "rgba(232,64,96,0.15)", color: "#e84060" }}>Today</span>
               </div>
               <div className="text-white font-heading text-xl font-light">2:00 PM</div>
-              <div className="text-white/40 text-xs mt-1 font-body">Dr. Sarah Al-Ahmad · Physiotherapy</div>
+              <div className="text-white/70 text-xs mt-1 font-body">Dr. Sarah Al-Ahmad · Physiotherapy</div>
             </div>
 
             {/* Glass card 3 */}
@@ -219,7 +219,7 @@ export default function Hero() {
                   style={{ background: "rgba(255,255,255,0.05)" }}>+42</div>
               </div>
               <div className="text-white text-sm font-body">Patients treated <strong className="text-white">this month</strong></div>
-              <div className="text-white/30 text-xs mt-1 font-body">⭐ 4.9 average rating</div>
+              <div className="text-white/55 text-xs mt-1 font-body">⭐ 4.9 average rating</div>
             </div>
           </div>
         </div>

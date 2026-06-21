@@ -62,7 +62,7 @@ export default function Services() {
               )}
               <div className="text-3xl mb-5 group-hover:scale-110 transition-transform duration-300">{s.icon}</div>
               <h3 className="font-heading text-white text-lg font-light mb-3">{s.title}</h3>
-              <p className="text-white/40 font-body text-sm leading-relaxed mb-6">{s.desc}</p>
+              <p className="text-white/70 font-body text-sm leading-relaxed mb-6">{s.desc}</p>
               <div className="flex items-center gap-2 text-sm font-body transition-colors duration-300 group-hover:text-white"
                 style={{ color: "rgba(232,64,96,0.6)" }}>
                 Learn more

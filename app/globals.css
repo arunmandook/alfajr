@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #5c0a1f;
-  --color-secondary: #2d0510;
+  --color-primary: #e84060;
+  --color-secondary: #b5203f;
   --color-accent: #e84060;
   --color-gold: #c9a96e;
-  --color-surface: rgba(255,255,255,0.04);
-  --color-border: rgba(255,255,255,0.08);
+  --color-surface: rgba(232,64,96,0.06);
+  --color-border: rgba(232,64,96,0.15);
 }
 
 * { box-sizing: border-box; }
@@ -17,7 +17,7 @@ html { scroll-behavior: auto; }
 
 body {
   font-family: var(--font-body), system-ui, sans-serif;
-  background: #08020a;
+  background: #0c0105;
   color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,16 +39,16 @@ html[dir="rtl"] h3 {
 
 /* ── Glassmorphism surface ─────────────────────────────────── */
 .glass {
-  background: rgba(255,255,255,0.04);
+  background: rgba(232,64,96,0.05);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(232,64,96,0.15);
 }
 .glass-dark {
-  background: rgba(8,2,10,0.6);
+  background: rgba(12,1,5,0.7);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(232,64,96,0.12);
+  border: 1px solid rgba(232,64,96,0.2);
 }
 
 /* ── Gradient text ─────────────────────────────────────────── */
@@ -66,8 +66,8 @@ html[dir="rtl"] h3 {
 }
 
 /* ── Section backgrounds ───────────────────────────────────── */
-.bg-dark   { background: #08020a; }
-.bg-dark-2 { background: #0e050f; }
+.bg-dark   { background: #0c0105; }
+.bg-dark-2 { background: #130208; }
 .bg-light  { background: #faf8f9; color: #1a0a0d; }
 .bg-light h1, .bg-light h2, .bg-light h3,
 .bg-light h4, .bg-light h5, .bg-light h6 { color: #1a0a0d; }

@@ -25,7 +25,7 @@ export default function Team() {
 
   return (
     <section ref={sectionRef} id="team" className="py-32"
-      style={{ background: "#0e050f" }}>
+      style={{ background: "#130208" }}>
       <div className="container mx-auto px-6">
         <div className="mb-16 reveal">
           <div className="flex items-center gap-3 mb-4">
@@ -35,7 +35,7 @@ export default function Team() {
           <h2 className="font-heading font-light text-white" style={{ fontSize: "clamp(36px,5vw,64px)" }}>
             Meet the <em style={{ fontStyle: "italic", color: "#c9a96e" }}>Team</em>
           </h2>
-          <p className="text-white/40 font-body text-lg max-w-xl mt-4">
+          <p className="text-white/70 font-body text-lg max-w-xl mt-4">
             Board-certified physiotherapists with international training and deep expertise in rehabilitation.
           </p>
         </div>
@@ -53,11 +53,11 @@ export default function Team() {
                 {m.spec}
               </div>
               <h3 className="font-heading text-white text-xl font-light mb-1">{m.name}</h3>
-              <p className="text-white/40 font-body text-sm mb-6">{m.title}</p>
+              <p className="text-white/70 font-body text-sm mb-6">{m.title}</p>
 
               <div className="flex items-center justify-between text-xs">
                 <div>
-                  <div className="text-white/25 font-body mb-0.5">Experience</div>
+                  <div className="text-white/50 font-body mb-0.5">Experience</div>
                   <div className="text-white/60 font-body">{m.exp}</div>
                 </div>
                 <div className="flex gap-1">

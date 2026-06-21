@@ -55,7 +55,7 @@ export default function Testimonials() {
                 </svg>
               ))}
             </div>
-            <span className="text-white/40 text-sm font-body">4.9 · 200+ reviews</span>
+            <span className="text-white/70 text-sm font-body">4.9 · 200+ reviews</span>
           </div>
         </div>
 
@@ -81,7 +81,7 @@ export default function Testimonials() {
                   </div>
                   <div>
                     <div className="text-white text-sm font-medium font-body">{t.name}</div>
-                    <div className="text-white/30 text-xs font-body">{t.role}</div>
+                    <div className="text-white/55 text-xs font-body">{t.role}</div>
                   </div>
                 </div>
               </div>

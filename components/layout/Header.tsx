@@ -54,7 +54,7 @@ export default function Header() {
             </div>
             <div className="text-left">
               <div className="text-white font-heading text-sm font-semibold leading-tight tracking-wide">Al Fajr</div>
-              <div className="text-white/40 text-[9px] tracking-[0.2em] uppercase">Rehabilitation Centre</div>
+              <div className="text-white/70 text-[9px] tracking-[0.2em] uppercase">Rehabilitation Centre</div>
             </div>
           </button>
 

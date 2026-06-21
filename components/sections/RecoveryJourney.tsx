@@ -46,7 +46,7 @@ export default function RecoveryJourney() {
 
   return (
     <section ref={sectionRef} id="recovery" className="relative overflow-hidden"
-      style={{ background: "#0a030c" }}>
+      style={{ background: "#100106" }}>
       <div className="h-screen flex flex-col justify-center">
         {/* Heading */}
         <div className="container mx-auto px-6 mb-16 flex-shrink-0">
@@ -57,7 +57,7 @@ export default function RecoveryJourney() {
           <h2 className="reveal font-heading font-light text-white" style={{ fontSize: "clamp(32px,4vw,56px)" }}>
             The Recovery <em style={{ fontStyle: "italic", color: "#c9a96e" }}>Journey</em>
           </h2>
-          <p className="reveal text-white/30 font-body text-sm mt-2">Scroll to explore →</p>
+          <p className="reveal text-white/55 font-body text-sm mt-2">Scroll to explore →</p>
         </div>
 
         {/* Horizontal scroll track */}
@@ -69,7 +69,7 @@ export default function RecoveryJourney() {
                 <div className="text-3xl mb-6">{s.icon}</div>
                 <div className="text-[10px] tracking-[0.2em] uppercase mb-2 font-body" style={{ color: "#c9a96e" }}>{s.duration}</div>
                 <h3 className="font-heading text-white text-2xl font-light mb-4">{s.title}</h3>
-                <p className="text-white/40 font-body text-sm leading-relaxed">{s.desc}</p>
+                <p className="text-white/70 font-body text-sm leading-relaxed">{s.desc}</p>
                 {i < STEPS.length - 1 && (
                   <div className="mt-8 flex items-center gap-2">
                     <div className="h-px flex-1" style={{ background: "rgba(255,255,255,0.08)" }} />
@@ -94,7 +94,7 @@ export default function RecoveryJourney() {
                 </div>
                 <div>
                   <div className="text-white font-heading text-xl font-light mb-1">Start Your Journey</div>
-                  <div className="text-white/40 font-body text-sm">Book a free consultation</div>
+                  <div className="text-white/70 font-body text-sm">Book a free consultation</div>
                 </div>
               </button>
             </div>

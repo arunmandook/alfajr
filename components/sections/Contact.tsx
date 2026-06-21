@@ -30,7 +30,7 @@ export default function Contact() {
 
   return (
     <section ref={sectionRef} id="contact" className="py-32"
-      style={{ background: "#0e050f" }}>
+      style={{ background: "#130208" }}>
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left */}
@@ -42,7 +42,7 @@ export default function Contact() {
             <h2 className="reveal font-heading font-light text-white mb-4" style={{ fontSize: "clamp(32px,4vw,56px)" }}>
               Visit <em style={{ fontStyle: "italic", color: "#c9a96e" }}>Us</em>
             </h2>
-            <p className="reveal text-white/40 font-body mb-10 max-w-md">
+            <p className="reveal text-white/70 font-body mb-10 max-w-md">
               Walk in or book ahead — we welcome same-day appointments when available.
             </p>
 
@@ -56,7 +56,7 @@ export default function Contact() {
                     {item.icon}
                   </div>
                   <div>
-                    <div className="text-[10px] tracking-[0.2em] uppercase text-white/25 font-body mb-0.5">{item.label}</div>
+                    <div className="text-[10px] tracking-[0.2em] uppercase text-white/50 font-body mb-0.5">{item.label}</div>
                     <div className="text-white/70 font-body text-sm group-hover:text-white transition-colors duration-200">{item.value}</div>
                   </div>
                 </a>
@@ -66,7 +66,7 @@ export default function Contact() {
             {/* Opening hours */}
             <div className="reveal mt-10 p-6 rounded-2xl"
               style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.06)" }}>
-              <div className="text-[10px] tracking-[0.2em] uppercase text-white/25 font-body mb-4">Opening Hours</div>
+              <div className="text-[10px] tracking-[0.2em] uppercase text-white/50 font-body mb-4">Opening Hours</div>
               {HOURS.map((h, i) => (
                 <div key={i} className="flex justify-between items-center py-2 border-b border-white/5 last:border-0">
                   <span className="text-white/50 font-body text-sm">{h.day}</span>

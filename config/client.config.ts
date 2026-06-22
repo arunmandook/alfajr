@@ -153,12 +153,12 @@ export const clientConfig: ClientConfig = {
 
   theme: {
     colors: {
-      primary: "#5c0a1f", // deep burgundy — main brand
-      secondary: "#2d0510", // near-black maroon — hero / footer
-      accent: "#e84060", // rose — call-to-action
-      neutral: "#8a6870", // muted mauve-grey — secondary text
-      background: "#fdfbfb", // warm off-white
-      foreground: "#1a0a0d", // near-black plum — body text
+      primary: "#7A0020", // deep crimson — main brand
+      secondary: "#A80030", // medium crimson — hero / footer
+      accent: "#E8001A", // vivid red — call-to-action
+      neutral: "#C47080", // muted rose — secondary text
+      background: "#FFF5F5", // warm cream
+      foreground: "#1A0005", // near-black with red tint — body text
     },
     fonts: {
       heading: "Cormorant Garamond", // elegant editorial serif

@@ -69,8 +69,8 @@ export default function Header() {
           {/* Logo */}
           <button onClick={() => scrollTo("#home")} className="flex items-center gap-3 group">
             <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg"
-              style={{ background: "linear-gradient(135deg, #e84060, #5c0a1f)",
-                boxShadow: "0 4px 20px rgba(232,64,96,0)" }}>
+              style={{ background: "linear-gradient(135deg, #E8001A, #7A0020)",
+                boxShadow: "0 4px 20px rgba(232,0,26,0)" }}>
               <span className="text-white font-heading text-sm font-semibold">AF</span>
             </div>
             <div className="text-left">
@@ -100,7 +100,7 @@ export default function Header() {
             </a>
             <button onClick={() => scrollTo("#book")}
               className="btn-shimmer btn-glow btn-ripple px-5 py-2.5 rounded-full text-[13px] font-medium text-white"
-              style={{ background: "linear-gradient(135deg, #e84060, #b5203f)" }}>
+              style={{ background: "linear-gradient(135deg, #E8001A, #A80030)" }}>
               Book Consultation
             </button>
           </div>
@@ -118,11 +118,11 @@ export default function Header() {
       <div className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 transition-all duration-500 ${
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
-        style={{ background: "rgba(10,1,4,0.97)", backdropFilter: "blur(24px)" }}>
+        style={{ background: "rgba(40,0,10,0.97)", backdropFilter: "blur(24px)" }}>
 
         {/* Decorative orb in menu */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full pointer-events-none"
-          style={{ background: "radial-gradient(circle, rgba(232,64,96,0.06) 0%, transparent 70%)", filter: "blur(60px)" }} />
+          style={{ background: "radial-gradient(circle, rgba(232,0,26,0.06) 0%, transparent 70%)", filter: "blur(60px)" }} />
 
         {links.map((l, i) => (
           <button key={l.label} onClick={() => scrollTo(l.href)}
@@ -134,7 +134,7 @@ export default function Header() {
 
         <button onClick={() => scrollTo("#book")}
           className="mobile-nav-link btn-shimmer btn-glow mt-4 px-8 py-3 rounded-full text-white font-medium"
-          style={{ background: "linear-gradient(135deg, #e84060, #b5203f)", animationDelay: "350ms" }}>
+          style={{ background: "linear-gradient(135deg, #E8001A, #A80030)", animationDelay: "350ms" }}>
           Book Consultation
         </button>
 

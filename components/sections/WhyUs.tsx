@@ -57,14 +57,14 @@ export default function WhyUs() {
 
   return (
     <section ref={sectionRef} id="about" className="py-32 relative overflow-hidden"
-      style={{ background: "#130208" }}>
+      style={{ background: "#4A0015" }}>
 
       {/* Background orbs */}
       <div className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse 50% 60% at 20% 50%, rgba(92,10,31,0.12) 0%, transparent 70%)" }} />
+        style={{ background: "radial-gradient(ellipse 50% 60% at 20% 50%, rgba(122,0,32,0.12) 0%, transparent 70%)" }} />
       <div className="absolute right-0 bottom-0 pointer-events-none"
         style={{ width: 500, height: 500,
-          background: "radial-gradient(circle, rgba(201,169,110,0.04) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(196,112,128,0.04) 0%, transparent 70%)",
           filter: "blur(70px)" }} />
 
       <div className="container mx-auto px-6">
@@ -72,11 +72,11 @@ export default function WhyUs() {
         {/* Header */}
         <div ref={headRef} className="mb-20">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ background: "#c9a96e" }} />
-            <span className="text-[11px] tracking-[0.25em] uppercase font-body" style={{ color: "#c9a96e" }}>Why Choose Us</span>
+            <div className="h-px w-8" style={{ background: "#C47080" }} />
+            <span className="text-[11px] tracking-[0.25em] uppercase font-body" style={{ color: "#C47080" }}>Why Choose Us</span>
           </div>
           <h2 className="font-heading font-light text-white" style={{ fontSize: "clamp(36px,5vw,64px)" }}>
-            Why Patients <em style={{ fontStyle: "italic", color: "#c9a96e" }}>Trust</em> Us
+            Why Patients <em style={{ fontStyle: "italic", color: "#C47080" }}>Trust</em> Us
           </h2>
         </div>
 
@@ -84,10 +84,10 @@ export default function WhyUs() {
         <div ref={statsRef} className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
           {STATS.map((s, i) => (
             <div key={i} className="card-pulse text-center p-8 rounded-2xl relative overflow-hidden group"
-              style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(232,64,96,0.1)" }}>
+              style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(232,0,26,0.1)" }}>
               {/* Hover background glow */}
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                style={{ background: "radial-gradient(circle at 50% 50%, rgba(232,64,96,0.05) 0%, transparent 70%)" }} />
+                style={{ background: "radial-gradient(circle at 50% 50%, rgba(232,0,26,0.05) 0%, transparent 70%)" }} />
               <div className="stat-number mb-1 relative z-10">
                 <AnimatedCounter end={s.value} suffix={s.suffix} />
               </div>
@@ -102,7 +102,7 @@ export default function WhyUs() {
           {PILLARS.map((p, i) => (
             <TiltCard key={i} maxTilt={7}
               className="service-card group"
-              style={{ border: "1px solid rgba(201,169,110,0.08)" }}>
+              style={{ border: "1px solid rgba(196,112,128,0.08)" }}>
               <div className="p-8">
                 <div className="card-icon text-4xl mb-6">{p.icon}</div>
                 <h3 className="font-heading text-white text-xl font-light mb-3">{p.title}</h3>

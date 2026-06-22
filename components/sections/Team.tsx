@@ -4,8 +4,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const TEAM = [
-  { name: "Dr. Sarah Al-Ahmad", title: "Lead Physiotherapist", spec: "Orthopaedic & Sports", initials: "SA", color: "#e84060", exp: "12 years", langs: ["EN","AR"] },
-  { name: "Dr. Khalid Hassan", title: "Rehabilitation Specialist", spec: "Neurological & Post-Surgery", initials: "KH", color: "#c9a96e", exp: "9 years", langs: ["EN","AR","UR"] },
+  { name: "Dr. Sarah Al-Ahmad", title: "Lead Physiotherapist", spec: "Orthopaedic & Sports", initials: "SA", color: "#E8001A", exp: "12 years", langs: ["EN","AR"] },
+  { name: "Dr. Khalid Hassan", title: "Rehabilitation Specialist", spec: "Neurological & Post-Surgery", initials: "KH", color: "#C47080", exp: "9 years", langs: ["EN","AR","UR"] },
   { name: "Dr. Priya Nair", title: "Sports Physiotherapist", spec: "Sports Injury & Performance", initials: "PN", color: "#5c8ae8", exp: "7 years", langs: ["EN","UR"] },
   { name: "Dr. Omar Al-Rashidi", title: "Manual Therapy Specialist", spec: "Spine & Chronic Pain", initials: "OR", color: "#60b5a0", exp: "11 years", langs: ["EN","AR"] },
 ];
@@ -25,15 +25,15 @@ export default function Team() {
 
   return (
     <section ref={sectionRef} id="team" className="py-32"
-      style={{ background: "#130208" }}>
+      style={{ background: "#4A0015" }}>
       <div className="container mx-auto px-6">
         <div className="mb-16 reveal">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ background: "#c9a96e" }} />
-            <span className="text-[11px] tracking-[0.25em] uppercase font-body" style={{ color: "#c9a96e" }}>Our Specialists</span>
+            <div className="h-px w-8" style={{ background: "#C47080" }} />
+            <span className="text-[11px] tracking-[0.25em] uppercase font-body" style={{ color: "#C47080" }}>Our Specialists</span>
           </div>
           <h2 className="font-heading font-light text-white" style={{ fontSize: "clamp(36px,5vw,64px)" }}>
-            Meet the <em style={{ fontStyle: "italic", color: "#c9a96e" }}>Team</em>
+            Meet the <em style={{ fontStyle: "italic", color: "#C47080" }}>Team</em>
           </h2>
           <p className="text-white/70 font-body text-lg max-w-xl mt-4">
             Board-certified physiotherapists with international training and deep expertise in rehabilitation.

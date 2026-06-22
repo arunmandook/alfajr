@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-heading font-semibold text-sm"
-                style={{ background: "linear-gradient(135deg, #e84060, #5c0a1f)" }}>AF</div>
+                style={{ background: "linear-gradient(135deg, #E8001A, #7A0020)" }}>AF</div>
               <div>
                 <div className="text-white font-heading text-base font-semibold">Al Fajr Rehabilitation</div>
                 <div className="text-white/55 text-[10px] tracking-[0.2em] uppercase">Ras Al Khaimah, UAE</div>

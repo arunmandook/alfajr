@@ -51,11 +51,11 @@ export default function RecoveryJourney() {
         {/* Heading */}
         <div className="container mx-auto px-6 mb-16 flex-shrink-0">
           <div className="reveal flex items-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ background: "#c9a96e" }} />
-            <span className="text-[11px] tracking-[0.25em] uppercase font-body" style={{ color: "#c9a96e" }}>Your Path to Recovery</span>
+            <div className="h-px w-8" style={{ background: "#C47080" }} />
+            <span className="text-[11px] tracking-[0.25em] uppercase font-body" style={{ color: "#C47080" }}>Your Path to Recovery</span>
           </div>
           <h2 className="reveal font-heading font-light text-white" style={{ fontSize: "clamp(32px,4vw,56px)" }}>
-            The Recovery <em style={{ fontStyle: "italic", color: "#c9a96e" }}>Journey</em>
+            The Recovery <em style={{ fontStyle: "italic", color: "#C47080" }}>Journey</em>
           </h2>
           <p className="reveal text-white/55 font-body text-sm mt-2">Scroll to explore →</p>
         </div>
@@ -67,7 +67,7 @@ export default function RecoveryJourney() {
               <div key={i} className="timeline-item" data-step={s.step}
                 style={{ background: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.06)" }}>
                 <div className="text-3xl mb-6">{s.icon}</div>
-                <div className="text-[10px] tracking-[0.2em] uppercase mb-2 font-body" style={{ color: "#c9a96e" }}>{s.duration}</div>
+                <div className="text-[10px] tracking-[0.2em] uppercase mb-2 font-body" style={{ color: "#C47080" }}>{s.duration}</div>
                 <h3 className="font-heading text-white text-2xl font-light mb-4">{s.title}</h3>
                 <p className="text-white/70 font-body text-sm leading-relaxed">{s.desc}</p>
                 {i < STEPS.length - 1 && (
@@ -85,9 +85,9 @@ export default function RecoveryJourney() {
             <div className="flex-shrink-0 w-64 flex items-center justify-center">
               <button onClick={() => document.querySelector("#book")?.scrollIntoView({ behavior: "smooth" })}
                 className="flex flex-col items-center gap-4 p-8 rounded-2xl text-center transition-all duration-300 hover:scale-105 group"
-                style={{ background: "linear-gradient(135deg, rgba(232,64,96,0.15), rgba(92,10,31,0.2))", border: "1px solid rgba(232,64,96,0.25)" }}>
+                style={{ background: "linear-gradient(135deg, rgba(232,0,26,0.15), rgba(122,0,32,0.2))", border: "1px solid rgba(232,0,26,0.25)" }}>
                 <div className="w-16 h-16 rounded-full flex items-center justify-center"
-                  style={{ background: "linear-gradient(135deg, #e84060, #b5203f)" }}>
+                  style={{ background: "linear-gradient(135deg, #E8001A, #A80030)" }}>
                   <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5" />
                   </svg>

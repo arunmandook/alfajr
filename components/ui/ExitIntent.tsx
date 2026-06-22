@@ -56,7 +56,7 @@ export default function ExitIntent() {
         ) : (
           <>
             <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
-              style={{ background: "linear-gradient(135deg, rgba(232,64,96,0.2), rgba(232,64,96,0.1))", border: "1px solid rgba(232,64,96,0.3)" }}>
+              style={{ background: "linear-gradient(135deg, rgba(232,0,26,0.2), rgba(232,0,26,0.1))", border: "1px solid rgba(232,0,26,0.3)" }}>
               <span className="text-2xl">🎯</span>
             </div>
             <h3 className="font-heading text-white text-2xl font-light mb-2">Before you go...</h3>
@@ -71,7 +71,7 @@ export default function ExitIntent() {
             </div>
             <button onClick={submit} disabled={loading || !name || !phone}
               className="w-full py-4 rounded-full text-sm font-medium font-body text-white transition-all duration-300 hover:scale-105 disabled:opacity-40"
-              style={{ background: "linear-gradient(135deg, #e84060, #b5203f)" }}>
+              style={{ background: "linear-gradient(135deg, #E8001A, #A80030)" }}>
               {loading ? "Sending..." : "Get My Free Consultation →"}
             </button>
             <button onClick={close} className="mt-3 text-xs text-white/20 font-body hover:text-white/40 transition-colors">

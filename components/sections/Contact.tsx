@@ -30,17 +30,17 @@ export default function Contact() {
 
   return (
     <section ref={sectionRef} id="contact" className="py-32"
-      style={{ background: "#130208" }}>
+      style={{ background: "#4A0015" }}>
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left */}
           <div>
             <div className="reveal flex items-center gap-3 mb-4">
-              <div className="h-px w-8" style={{ background: "#c9a96e" }} />
-              <span className="text-[11px] tracking-[0.25em] uppercase font-body" style={{ color: "#c9a96e" }}>Get In Touch</span>
+              <div className="h-px w-8" style={{ background: "#C47080" }} />
+              <span className="text-[11px] tracking-[0.25em] uppercase font-body" style={{ color: "#C47080" }}>Get In Touch</span>
             </div>
             <h2 className="reveal font-heading font-light text-white mb-4" style={{ fontSize: "clamp(32px,4vw,56px)" }}>
-              Visit <em style={{ fontStyle: "italic", color: "#c9a96e" }}>Us</em>
+              Visit <em style={{ fontStyle: "italic", color: "#C47080" }}>Us</em>
             </h2>
             <p className="reveal text-white/70 font-body mb-10 max-w-md">
               Walk in or book ahead — we welcome same-day appointments when available.
@@ -52,7 +52,7 @@ export default function Contact() {
                   rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="reveal flex items-start gap-4 group">
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
-                    style={{ background: "rgba(201,169,110,0.1)", border: "1px solid rgba(201,169,110,0.15)" }}>
+                    style={{ background: "rgba(196,112,128,0.1)", border: "1px solid rgba(196,112,128,0.15)" }}>
                     {item.icon}
                   </div>
                   <div>

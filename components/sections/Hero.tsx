@@ -60,7 +60,7 @@ export default function Hero() {
         if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(232,64,96,${p.a * 0.6})`;
+        ctx.fillStyle = `rgba(232,0,26,${p.a * 0.6})`;
         ctx.fill();
       });
       for (let i = 0; i < particles.length; i++) {
@@ -70,7 +70,7 @@ export default function Hero() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(232,64,96,${0.1 * (1 - d / 130)})`;
+            ctx.strokeStyle = `rgba(232,0,26,${0.1 * (1 - d / 130)})`;
             ctx.lineWidth = 0.6;
             ctx.stroke();
           }
@@ -174,7 +174,7 @@ export default function Hero() {
   return (
     <section ref={sectionRef} id="home"
       className="relative min-h-screen flex items-center overflow-hidden scanlines"
-      style={{ background: "radial-gradient(ellipse 90% 80% at 15% 50%, #200409 0%, #0c0105 65%)" }}>
+      style={{ background: "radial-gradient(ellipse 90% 80% at 15% 50%, #5C0018 0%, #3D0010 65%)" }}>
 
       {/* Particle canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" style={{ opacity: 0.7 }} />
@@ -182,13 +182,13 @@ export default function Hero() {
       {/* Animated gradient orbs — use CSS class animations */}
       <div className="orb-1 absolute pointer-events-none"
         style={{ top: "15%", right: "20%", width: 600, height: 600,
-          background: "radial-gradient(circle, rgba(120,10,40,0.35) 0%, transparent 70%)", filter: "blur(70px)" }} />
+          background: "radial-gradient(circle, rgba(168,0,48,0.35) 0%, transparent 70%)", filter: "blur(70px)" }} />
       <div className="orb-2 absolute pointer-events-none"
         style={{ bottom: "20%", left: "10%", width: 400, height: 400,
-          background: "radial-gradient(circle, rgba(232,64,96,0.12) 0%, transparent 70%)", filter: "blur(50px)" }} />
+          background: "radial-gradient(circle, rgba(232,0,26,0.12) 0%, transparent 70%)", filter: "blur(50px)" }} />
       <div className="orb-3 absolute pointer-events-none"
         style={{ top: "60%", right: "35%", width: 280, height: 280,
-          background: "radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%)", filter: "blur(40px)" }} />
+          background: "radial-gradient(circle, rgba(196,112,128,0.08) 0%, transparent 70%)", filter: "blur(40px)" }} />
 
       {/* Content */}
       <div className="container mx-auto px-6 pt-32 pb-24 relative z-10">
@@ -199,9 +199,9 @@ export default function Hero() {
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-8">
               <div className="hero-eyebrow-line h-px w-10 origin-left"
-                style={{ background: "#e84060" }} />
+                style={{ background: "#E8001A" }} />
               <span className="hero-eyebrow-text text-[11px] tracking-[0.25em] uppercase font-body"
-                style={{ color: "#e84060" }}>
+                style={{ color: "#E8001A" }}>
                 Ras Al Khaimah · UAE
               </span>
             </div>
@@ -219,7 +219,7 @@ export default function Hero() {
                 <span key={i} className="word inline-block"
                   style={{ marginRight: !accent ? "0.25em" : 0, display: "inline-block" }}>
                   {accent
-                    ? <em style={{ fontStyle: "italic", color: "#e84060" }}>{text}</em>
+                    ? <em style={{ fontStyle: "italic", color: "#E8001A" }}>{text}</em>
                     : text}
                   {accent && i === 1 && " "}
                   {accent && i === 1 && <br />}
@@ -239,7 +239,7 @@ export default function Hero() {
               <MagneticButton
                 onClick={scrollToBook}
                 className="btn-shimmer btn-glow btn-ripple group inline-flex items-center gap-3 px-8 py-4 rounded-full text-white font-medium text-[15px]"
-                style={{ background: "linear-gradient(135deg, #e84060, #b5203f)", boxShadow: "0 8px 32px rgba(232,64,96,0.35)" }}>
+                style={{ background: "linear-gradient(135deg, #E8001A, #A80030)", boxShadow: "0 8px 32px rgba(232,0,26,0.35)" }}>
                 Book Free Consultation
                 <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5"
                   fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -303,19 +303,19 @@ export default function Hero() {
               />
               {/* Dark vignette */}
               <div style={{ position: "absolute", inset: 0,
-                background: "linear-gradient(135deg, rgba(8,0,3,0.55) 0%, rgba(8,0,3,0.2) 60%, rgba(8,0,3,0.45) 100%)" }} />
+                background: "linear-gradient(135deg, rgba(35,0,8,0.55) 0%, rgba(35,0,8,0.2) 60%, rgba(35,0,8,0.45) 100%)" }} />
               {/* Red brand tint */}
-              <div style={{ position: "absolute", inset: 0, background: "rgba(92,10,31,0.22)" }} />
+              <div style={{ position: "absolute", inset: 0, background: "rgba(122,0,32,0.22)" }} />
               {/* Left fade */}
               <div style={{ position: "absolute", top: 0, left: 0, bottom: 0, width: "30%",
-                background: "linear-gradient(to right, rgba(8,0,3,0.7) 0%, transparent 100%)" }} />
+                background: "linear-gradient(to right, rgba(35,0,8,0.7) 0%, transparent 100%)" }} />
               {/* Dot indicators */}
               <div style={{ position: "absolute", bottom: 16, left: "50%", transform: "translateX(-50%)",
                 display: "flex", gap: 6, zIndex: 2 }}>
                 {HERO_IMAGES.map((_, i) => (
                   <button key={i} onClick={() => { setPrevIdx(imgIdx); setImgIdx(i); }}
                     style={{ width: i === imgIdx ? 20 : 6, height: 6, borderRadius: 99,
-                      background: i === imgIdx ? "#e84060" : "rgba(255,255,255,0.3)",
+                      background: i === imgIdx ? "#E8001A" : "rgba(255,255,255,0.3)",
                       border: "none", cursor: "pointer", padding: 0,
                       transition: "all 0.3s ease" }} />
                 ))}
@@ -323,7 +323,7 @@ export default function Hero() {
               {/* Image label */}
               <div style={{ position: "absolute", bottom: 40, right: 16,
                 background: "rgba(0,0,0,0.5)", backdropFilter: "blur(8px)",
-                border: "1px solid rgba(232,64,96,0.25)", borderRadius: 99,
+                border: "1px solid rgba(232,0,26,0.25)", borderRadius: 99,
                 padding: "4px 12px", color: "rgba(255,255,255,0.7)", fontSize: 10,
                 letterSpacing: "0.12em", textTransform: "uppercase" }}>
                 {HERO_IMAGES[imgIdx].label}
@@ -339,7 +339,7 @@ export default function Hero() {
         <span className="text-white text-[10px] tracking-[0.3em] uppercase font-body">Scroll</span>
         <div className="w-px h-12 overflow-hidden relative">
           <div className="w-full h-full absolute"
-            style={{ background: "linear-gradient(180deg, #e84060, transparent)",
+            style={{ background: "linear-gradient(180deg, #E8001A, transparent)",
               animation: "scrollDown 1.8s ease infinite" }} />
         </div>
       </div>

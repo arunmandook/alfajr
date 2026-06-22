@@ -10,8 +10,8 @@ const CONDITIONS = [
     desc: "Chronic neck tension, whiplash injuries, cervical disc problems, and postural strain from desk work. Our specialists restore full range of motion and relieve nerve compression.",
     tags: ["Manual Therapy", "Dry Needling", "Postural Correction", "Deep Tissue"],
     recovery: "4–8 weeks",
-    color: "#e84060",
-    bg: "linear-gradient(160deg, #2a0610 0%, #5a0f20 100%)",
+    color: "#E8001A",
+    bg: "linear-gradient(160deg, #520016 0%, #7A0020 100%)",
     img: "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=700&h=520&fit=crop",
   },
   {
@@ -21,8 +21,8 @@ const CONDITIONS = [
     desc: "Rotator cuff tears, shoulder impingement, frozen shoulder (adhesive capsulitis), and AC joint sprains. We restore strength, stability and overhead function.",
     tags: ["Joint Mobilisation", "Shockwave Therapy", "Strength Training", "Taping"],
     recovery: "6–16 weeks",
-    color: "#d43f5a",
-    bg: "linear-gradient(160deg, #250510 0%, #550d22 100%)",
+    color: "#CC0016",
+    bg: "linear-gradient(160deg, #4A0015 0%, #7A0020 100%)",
     img: "https://images.unsplash.com/photo-1645005512968-0c1fe99f0093?w=700&h=520&fit=crop&q=85",
   },
   {
@@ -32,8 +32,8 @@ const CONDITIONS = [
     desc: "Lower back pain, disc herniation, sciatica, spondylosis, and spinal stenosis. One of our most treated conditions — with an exceptional recovery rate using a multi-modal approach.",
     tags: ["Spinal Decompression", "Core Rehab", "McKenzie Method", "TENS"],
     recovery: "6–12 weeks",
-    color: "#c93555",
-    bg: "linear-gradient(160deg, #200408 0%, #4d0c1a 100%)",
+    color: "#BB0014",
+    bg: "linear-gradient(160deg, #5C0018 0%, #680018 100%)",
     img: "https://images.unsplash.com/photo-1706353399656-210cca727a33?w=700&h=520&fit=crop&q=85",
   },
   {
@@ -43,8 +43,8 @@ const CONDITIONS = [
     desc: "Femoroacetabular impingement (FAI), hip bursitis, labral tears, groin strains, and post hip replacement rehabilitation. We restore pain-free mobility and strength.",
     tags: ["Soft Tissue Release", "Gait Retraining", "Hip Strengthening", "Hydrotherapy"],
     recovery: "8–20 weeks",
-    color: "#bf2e4e",
-    bg: "linear-gradient(160deg, #1e0408 0%, #480a18 100%)",
+    color: "#A80030",
+    bg: "linear-gradient(160deg, #4A0014 0%, #600016 100%)",
     img: "https://images.pexels.com/photos/20860616/pexels-photo-20860616.jpeg?auto=compress&cs=tinysrgb&w=700&h=520&fit=crop",
   },
   {
@@ -54,8 +54,8 @@ const CONDITIONS = [
     desc: "ACL/PCL ligament tears, meniscus injuries, patellofemoral pain, runner's knee, and knee osteoarthritis. Rapid return-to-sport protocols for athletes and active individuals.",
     tags: ["ACL Rehab Protocol", "Shockwave", "VMO Strengthening", "Bracing"],
     recovery: "8–24 weeks",
-    color: "#e84060",
-    bg: "linear-gradient(160deg, #280610 0%, #5c1020 100%)",
+    color: "#E8001A",
+    bg: "linear-gradient(160deg, #520016 0%, #7A0020 100%)",
     img: "https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?w=700&h=520&fit=crop&q=85",
   },
   {
@@ -65,8 +65,8 @@ const CONDITIONS = [
     desc: "Ankle sprains and instability, plantar fasciitis, Achilles tendinopathy, and flat foot correction. We address both acute injuries and chronic overuse conditions.",
     tags: ["Proprioception Training", "Orthotic Assessment", "Dry Needling", "Taping"],
     recovery: "4–12 weeks",
-    color: "#d94a62",
-    bg: "linear-gradient(160deg, #220408 0%, #520e1c 100%)",
+    color: "#D00018",
+    bg: "linear-gradient(160deg, #4A0015 0%, #650018 100%)",
     img: "https://images.unsplash.com/photo-1545463913-5083aa7359a6?w=700&h=520&fit=crop&q=85",
   },
 ];
@@ -96,20 +96,20 @@ export default function Conditions() {
   }, [next]);
 
   return (
-    <section id="conditions" className="py-20 relative overflow-hidden" style={{ background: "#0c0105" }}>
+    <section id="conditions" className="py-20 relative overflow-hidden" style={{ background: "#3D0010" }}>
       <div className="absolute inset-0 pointer-events-none transition-all duration-1000"
-        style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(232,64,96,0.07) 0%, transparent 70%)" }} />
+        style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(232,0,26,0.07) 0%, transparent 70%)" }} />
 
       <div className="container mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-14">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-8" style={{ background: "#e84060" }} />
-            <span className="text-[11px] tracking-[0.25em] uppercase font-body" style={{ color: "#e84060" }}>Specialist Care</span>
-            <div className="h-px w-8" style={{ background: "#e84060" }} />
+            <div className="h-px w-8" style={{ background: "#E8001A" }} />
+            <span className="text-[11px] tracking-[0.25em] uppercase font-body" style={{ color: "#E8001A" }}>Specialist Care</span>
+            <div className="h-px w-8" style={{ background: "#E8001A" }} />
           </div>
           <h2 className="font-heading font-light text-white" style={{ fontSize: "clamp(32px,4.5vw,60px)" }}>
-            Conditions We <em style={{ fontStyle: "italic", color: "#e84060" }}>Treat</em>
+            Conditions We <em style={{ fontStyle: "italic", color: "#E8001A" }}>Treat</em>
           </h2>
           <p className="text-white/55 font-body mt-3 text-base max-w-md mx-auto">
             Specialist-led care for the most common musculoskeletal conditions in the UAE
@@ -119,7 +119,7 @@ export default function Conditions() {
         {/* Carousel */}
         <div className="max-w-5xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden"
-            style={{ background: "#130208", border: "1px solid rgba(232,64,96,0.2)", minHeight: "440px" }}>
+            style={{ background: "#4A0015", border: "1px solid rgba(232,0,26,0.2)", minHeight: "440px" }}>
 
             <AnimatePresence mode="wait" custom={dir}>
               <motion.div key={idx} custom={dir} variants={slideVariants}
@@ -140,10 +140,10 @@ export default function Conditions() {
 
                   {/* Subtle dark vignette for text readability */}
                   <div style={{ position: "absolute", inset: 0,
-                    background: "linear-gradient(to top, rgba(10,1,4,0.8) 0%, rgba(10,1,4,0.1) 55%, rgba(10,1,4,0.25) 100%)" }} />
+                    background: "linear-gradient(to top, rgba(40,0,10,0.8) 0%, rgba(40,0,10,0.1) 55%, rgba(40,0,10,0.25) 100%)" }} />
 
                   {/* Light red brand tint */}
-                  <div style={{ position: "absolute", inset: 0, background: "rgba(92,10,31,0.2)" }} />
+                  <div style={{ position: "absolute", inset: 0, background: "rgba(122,0,32,0.2)" }} />
 
                   {/* Slide number watermark */}
                   <span style={{ position: "absolute", top: 20, left: 24, color: "rgba(255,255,255,0.06)", lineHeight: 1 }}
@@ -162,7 +162,7 @@ export default function Conditions() {
 
                   {/* Recovery badge bottom-left */}
                   <div style={{ position: "absolute", bottom: 20, left: 20,
-                    background: "rgba(0,0,0,0.6)", border: "1px solid rgba(232,64,96,0.35)",
+                    background: "rgba(0,0,0,0.6)", border: "1px solid rgba(232,0,26,0.35)",
                     color: "rgba(255,255,255,0.85)", backdropFilter: "blur(8px)",
                     padding: "8px 16px", borderRadius: 999,
                     display: "flex", alignItems: "center", gap: 8 }}
@@ -202,7 +202,7 @@ export default function Conditions() {
                   <button
                     onClick={() => document.querySelector("#book")?.scrollIntoView({ behavior: "smooth" })}
                     className="btn-shimmer btn-glow inline-flex items-center gap-3 px-6 py-3.5 rounded-full text-sm font-medium font-body self-start"
-                    style={{ background: `linear-gradient(135deg, ${c.color}, #b5203f)`, color: "#fff" }}>
+                    style={{ background: `linear-gradient(135deg, ${c.color}, #A80030)`, color: "#fff" }}>
                     Book for {c.name.split(" ")[0]} Treatment
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -217,15 +217,15 @@ export default function Conditions() {
           <div className="flex items-center justify-between mt-6">
             <div className="flex gap-3">
               <button onClick={prev}
-                className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:border-[#e84060] hover:text-white"
-                style={{ border: "1px solid rgba(232,64,96,0.25)", color: "rgba(255,255,255,0.4)" }}>
+                className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:border-[#E8001A] hover:text-white"
+                style={{ border: "1px solid rgba(232,0,26,0.25)", color: "rgba(255,255,255,0.4)" }}>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/>
                 </svg>
               </button>
               <button onClick={next}
-                className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:border-[#e84060] hover:text-white"
-                style={{ border: "1px solid rgba(232,64,96,0.25)", color: "rgba(255,255,255,0.4)" }}>
+                className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:border-[#E8001A] hover:text-white"
+                style={{ border: "1px solid rgba(232,0,26,0.25)", color: "rgba(255,255,255,0.4)" }}>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
                 </svg>
@@ -238,9 +238,9 @@ export default function Conditions() {
                 <button key={cond.id} onClick={() => go(i)}
                   className="px-3.5 py-1.5 rounded-full text-xs font-body transition-all duration-300"
                   style={{
-                    background: i === idx ? "#e84060" : "rgba(232,64,96,0.08)",
+                    background: i === idx ? "#E8001A" : "rgba(232,0,26,0.08)",
                     color: i === idx ? "#fff" : "rgba(255,255,255,0.5)",
-                    border: `1px solid ${i === idx ? "#e84060" : "rgba(232,64,96,0.15)"}`,
+                    border: `1px solid ${i === idx ? "#E8001A" : "rgba(232,0,26,0.15)"}`,
                   }}>
                   {cond.name.split(" ")[0]}
                 </button>
@@ -255,7 +255,7 @@ export default function Conditions() {
                   style={{
                     width: i === idx ? "20px" : "8px",
                     height: "8px",
-                    background: i === idx ? "#e84060" : "rgba(232,64,96,0.25)",
+                    background: i === idx ? "#E8001A" : "rgba(232,0,26,0.25)",
                   }} />
               ))}
             </div>

@@ -74,19 +74,19 @@ export default function BookingForm() {
     <section ref={sectionRef} id="book" className="py-32 relative overflow-hidden"
       style={{ background: "linear-gradient(180deg, #100106 0%, #180309 100%)" }}>
       <div className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse 60% 70% at 50% 50%, rgba(232,64,96,0.06) 0%, transparent 70%)" }} />
+        style={{ background: "radial-gradient(ellipse 60% 70% at 50% 50%, rgba(232,0,26,0.06) 0%, transparent 70%)" }} />
 
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto">
           {/* Heading */}
           <div className="text-center mb-14 reveal">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-px w-8" style={{ background: "#e84060" }} />
-              <span className="text-[11px] tracking-[0.25em] uppercase font-body" style={{ color: "#e84060" }}>Free Consultation</span>
-              <div className="h-px w-8" style={{ background: "#e84060" }} />
+              <div className="h-px w-8" style={{ background: "#E8001A" }} />
+              <span className="text-[11px] tracking-[0.25em] uppercase font-body" style={{ color: "#E8001A" }}>Free Consultation</span>
+              <div className="h-px w-8" style={{ background: "#E8001A" }} />
             </div>
             <h2 className="font-heading font-light text-white mb-3" style={{ fontSize: "clamp(32px,4vw,56px)" }}>
-              Book Your <em style={{ fontStyle: "italic", color: "#e84060" }}>Consultation</em>
+              Book Your <em style={{ fontStyle: "italic", color: "#E8001A" }}>Consultation</em>
             </h2>
             <p className="text-white/70 font-body">No waiting lists. We&apos;ll confirm your slot within 2 hours.</p>
           </div>
@@ -96,10 +96,10 @@ export default function BookingForm() {
             {([1, 2, 3] as Step[]).map((s) => (
               <div key={s} className="flex items-center gap-4">
                 <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-body font-medium transition-all duration-300"
-                  style={{ background: step >= s ? "#e84060" : "rgba(255,255,255,0.06)", color: step >= s ? "#fff" : "rgba(255,255,255,0.3)", border: step >= s ? "none" : "1px solid rgba(255,255,255,0.08)" }}>
+                  style={{ background: step >= s ? "#E8001A" : "rgba(255,255,255,0.06)", color: step >= s ? "#fff" : "rgba(255,255,255,0.3)", border: step >= s ? "none" : "1px solid rgba(255,255,255,0.08)" }}>
                   {step > s ? "✓" : s}
                 </div>
-                {s < 3 && <div className="w-16 h-px transition-all duration-500" style={{ background: step > s ? "#e84060" : "rgba(255,255,255,0.08)" }} />}
+                {s < 3 && <div className="w-16 h-px transition-all duration-500" style={{ background: step > s ? "#E8001A" : "rgba(255,255,255,0.08)" }} />}
               </div>
             ))}
           </div>
@@ -109,7 +109,7 @@ export default function BookingForm() {
             {done ? (
               <div className="text-center py-8">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
-                  style={{ background: "linear-gradient(135deg, #e84060, #b5203f)" }}>
+                  style={{ background: "linear-gradient(135deg, #E8001A, #A80030)" }}>
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
@@ -151,8 +151,8 @@ export default function BookingForm() {
                         <button key={c} onClick={() => set("condition", c)}
                           className="px-4 py-3 rounded-xl text-sm font-body text-left transition-all duration-200"
                           style={{
-                            background: form.condition === c ? "rgba(232,64,96,0.15)" : "rgba(255,255,255,0.04)",
-                            border: form.condition === c ? "1px solid rgba(232,64,96,0.5)" : "1px solid rgba(255,255,255,0.06)",
+                            background: form.condition === c ? "rgba(232,0,26,0.15)" : "rgba(255,255,255,0.04)",
+                            border: form.condition === c ? "1px solid rgba(232,0,26,0.5)" : "1px solid rgba(255,255,255,0.06)",
                             color: form.condition === c ? "#fff" : "rgba(255,255,255,0.5)"
                           }}>
                           {c}
@@ -176,12 +176,12 @@ export default function BookingForm() {
                         <button key={t} onClick={() => set("preferred_time", t)}
                           className="w-full px-5 py-4 rounded-xl text-sm font-body text-left flex items-center gap-4 transition-all duration-200"
                           style={{
-                            background: form.preferred_time === t ? "rgba(232,64,96,0.12)" : "rgba(255,255,255,0.03)",
-                            border: form.preferred_time === t ? "1px solid rgba(232,64,96,0.4)" : "1px solid rgba(255,255,255,0.06)",
+                            background: form.preferred_time === t ? "rgba(232,0,26,0.12)" : "rgba(255,255,255,0.03)",
+                            border: form.preferred_time === t ? "1px solid rgba(232,0,26,0.4)" : "1px solid rgba(255,255,255,0.06)",
                             color: form.preferred_time === t ? "#fff" : "rgba(255,255,255,0.5)"
                           }}>
                           <div className="w-4 h-4 rounded-full flex-shrink-0 flex items-center justify-center"
-                            style={{ border: form.preferred_time === t ? "none" : "1px solid rgba(255,255,255,0.15)", background: form.preferred_time === t ? "#e84060" : "transparent" }}>
+                            style={{ border: form.preferred_time === t ? "none" : "1px solid rgba(255,255,255,0.15)", background: form.preferred_time === t ? "#E8001A" : "transparent" }}>
                             {form.preferred_time === t && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
                           </div>
                           {t}
@@ -191,7 +191,7 @@ export default function BookingForm() {
                   </div>
                 )}
 
-                {error && <p className="mt-4 text-sm font-body" style={{ color: "#e84060" }}>{error}</p>}
+                {error && <p className="mt-4 text-sm font-body" style={{ color: "#E8001A" }}>{error}</p>}
 
                 <div className="flex items-center justify-between mt-8">
                   {step > 1 ? (
@@ -204,13 +204,13 @@ export default function BookingForm() {
                   {step < 3 ? (
                     <button onClick={nextStep}
                       className="flex items-center gap-3 px-8 py-4 rounded-full text-sm font-medium font-body text-white transition-all duration-300 hover:scale-105"
-                      style={{ background: "linear-gradient(135deg, #e84060, #b5203f)" }}>
+                      style={{ background: "linear-gradient(135deg, #E8001A, #A80030)" }}>
                       Continue →
                     </button>
                   ) : (
                     <button onClick={submit} disabled={loading}
                       className="flex items-center gap-3 px-8 py-4 rounded-full text-sm font-medium font-body text-white transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                      style={{ background: "linear-gradient(135deg, #e84060, #b5203f)" }}>
+                      style={{ background: "linear-gradient(135deg, #E8001A, #A80030)" }}>
                       {loading ? "Submitting..." : "Book Free Consultation"}
                     </button>
                   )}
